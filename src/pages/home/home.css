@@ -1,10 +1,10 @@
-.home-jumbotron-overlay, .home-jumbotron {
+.home-jumbotron-overlay, .home-jumbotron, .our-solution, .advantages {
     width: 100vw;
     height: 100vh;
     background-size: cover;
 }
 
-.home-jumbotron {
+.home-jumbotron{
     background-image: url(../../assets/images/main-photo.jpg);
     position: relative;
     display: flex;
@@ -22,7 +22,6 @@
 }
 
 .jumbotron-content {
-    position: relative;
     z-index: 1;
     text-align: center;
     margin: -86px 0 0;
@@ -43,21 +42,28 @@
 
 }
 
-.jumbotron-content svg {
+.jumbotron-content .logo-white {
     width: 200px;
     max-width: 200px;
     height: 70px;
 }
 
-.arrow {
-    width: 100px;
-    height: 100px;
-    animation: bounce 2s infinite;
+.arrow-link {
+    animation: bounce 4s infinite;
+    display: block;
+    position: absolute;
+    bottom: 100px;
+    left: calc(50% - 23px);
+}
+
+.arrow-icon {
+    width: 46px;
+    height: 46px;
 }
 
 @keyframes bounce {
     0% {
-        transform: translateY(0);
+        transform: translateY(0px);
     }
 
     50% {
@@ -65,6 +71,140 @@
     }
 
     100% {
-        transform: translateY(0);
+        transform: translateY(0px);
     }
+}
+
+.our-solution {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.our-solution-title{
+    color: #000080;
+
+}
+
+.advantages-title{
+    color: white;
+}
+
+.our-solution-title, .advantages-title {
+    font-family: "Helvetica Hebrew", Sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.our-solution-content {
+    text-align: center;
+    z-index: 1;
+    width: auto;
+    max-width: auto;
+    align-content: center;
+    align-items: center;
+}
+
+
+.our-solution-text {
+    color: #000080;
+    font-family: "Helvetica Hebrew", Sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+.chart, .clock, .smartphone {
+    width: 120px;
+    max-width: 120px;
+    height: 120px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.icons-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-wrap {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon-wrap a {
+    box-shadow: inset 1px 1px 2px rgb(255 255 255 / 20%), inset 3px 15px 45px rgb(255 255 255 / 10%), inset -1px -1px 2px rgb(0 0 0 / 50%), inset -3px -15px 45px rgb(0 0 0 / 10%);
+    border-radius: 999px;
+    display: block;
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    max-width: 120px;
+    max-height: 120px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-wrap a svg {
+    width: 70px;
+    max-width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.icon-title{
+    color: #000080;
+    font-family: "Helvetica Hebrew",Sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.advantages {
+    background-image: url(../../assets/images/blue_dot.png);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-group{
+    background-color: #fff;
+    width: 120px !important;
+    height: 120px !important;
+    overflow: visible;
+    border-radius: 100px !important;
+    margin: auto !important;
+    box-shadow: 0px 10px 15px -6px rgb(0 0 0 / 50%) !important;
+    transition: all .3s ease 0s;
+    -webkit-transition: all .3s ease 0s
+}
+
+.advantages-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-in{
+    width: 75px;
+    height: 75px;
+    padding: 20px !important;
+    object-fit: fill;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: none;
+    box-shadow: inset 1px 1px 2px rgb(255 255 255 / 20%), inset 3px 15px 45px rgb(255 255 255 / 10%), inset -1px -1px 2px rgb(0 0 0 / 50%), inset -3px -15px 45px rgb(0 0 0 / 10%);
+}
+
+.icon-group {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
