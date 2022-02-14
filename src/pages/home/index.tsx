@@ -1,20 +1,24 @@
 import "./home.css"
 import Navbar from "../../components/navbar";
-import { ReactComponent as LogoWhite } from "../../assets/icons/Logo-White-App.svg";
-import { ReactComponent as Arrow } from "../../assets/icons/arrow.svg";
-import { ReactComponent as Chart } from "../../assets/icons/chart-icon.svg";
-import { ReactComponent as Clock } from "../../assets/icons/clock-icon.svg";
-import { ReactComponent as Smartphone } from "../../assets/icons/smartphone-icon.svg";
-import { ReactComponent as CashFlow } from "../../assets/icons/cash-flow.svg";
-import { ReactComponent as Competition } from "../../assets/icons/competition-icon.svg";
-import { ReactComponent as Corona } from "../../assets/icons/corona-icon.svg";
-import { ReactComponent as Handshake } from "../../assets/icons/handshake-icon.svg";
-import { ReactComponent as Refresh } from "../../assets/icons/refresh-icon.svg";
-import { ReactComponent as SaveMoney } from "../../assets/icons/save-money-icon.svg";
-import { ReactComponent as OneFingerClick } from "../../assets/icons/one-Finger-Click.svg";
-import { ReactComponent as Lock } from "../../assets/icons/lock-icon.svg";
+import { LogoWhite, Arrow, Chart, Clock, Smartphone, CashFlow, Competition, Corona, Handshake, Refresh, SaveMoney, OneFingerClick, Lock } from "../../assets/icons";
+import Deloitte from "../../assets/images/deloitte-digital.png";
+import Erech from "../../assets/images/erechlogo.png";
+import Oracle from "../../assets/images/oracle.png";
+import BDO from "../../assets/images/bdo.png";
+import Obelisk from "../../assets/images/obelisk.png";
+import PrimeSec from "../../assets/images/prime-sec.png";
+import PWC from "../../assets/images/pwc.png";
+import Tadmor from "../../assets/images/tadmor.png";
+import MediaControlCard from "../../components/card";
+import abc from "../../assets/images/working-team.jpg";
+import interview from "../../assets/images/interview.webp"
+import smiling from "../../assets/images/smiling.webp"
+import { Button } from "@mui/material";
+import ChevronLeft from "@mui/icons-material/ChevronLeft";
 
 
+const partners = [Obelisk, Oracle, PrimeSec, Erech, BDO, Deloitte, Tadmor, PWC]
+const careerPath = "../career"
 const Home = () => {
     return (
         <div className="page-container">
@@ -42,9 +46,9 @@ const Home = () => {
                         <p className="our-solution-text" >פתרון בעיית תזרים מזומנים לעסקים (שוטף פלוס) באמצעות שיטה ייחודית וטכנולוגיה מתקדמת היוצרת דרכי מימון חדשות בשוק</p>
                     </div>
                     <div className="icons-row">
-                        <div className="icon-wrap"><a href="" ><Chart className="chart"/></a> <span className="icon-title">כולם מרוויחים</span></div>
-                        <div className="icon-wrap"><a href="" ><Clock className="clock"/></a><span className="icon-title">מנוהל באופן מלא</span></div>
-                        <div className="icon-wrap"><a href="" ><Smartphone className="smartphone"/></a><span className="icon-title">דיגיטלי בקליק אחד</span></div>
+                        <div className="icon-wrap"><a href="" ><Chart className="chart" /></a> <span className="icon-title">כולם מרוויחים</span></div>
+                        <div className="icon-wrap"><a href="" ><Clock className="clock" /></a><span className="icon-title">מנוהל באופן מלא</span></div>
+                        <div className="icon-wrap"><a href="" ><Smartphone className="smartphone" /></a><span className="icon-title">דיגיטלי בקליק אחד</span></div>
                     </div>
                 </div>
             </div>
@@ -52,19 +56,110 @@ const Home = () => {
             <div className="advantages">
                 <div className="advantages-content">
                     <h2 className="advantages-title">.היתרונות שלנו</h2>
-                    <div>
-                        <div className="icon-group"><CashFlow className="icon-in"/></div>
-                        <div className="icon-group"><SaveMoney className="icon-in"/></div>
-                        <div className="icon-group"><Refresh className="icon-in"/></div>
-                        <div className="icon-group"><OneFingerClick className="icon-in"/></div>
-                        <div className="icon-group"><Corona className="icon-in"/></div>
-                        <div className="icon-group"><Handshake className="icon-in"/></div>
-                        <div className="icon-group"><Lock className="icon-in"/></div>
-                        <div className="icon-group"><Competition className="icon-in"/></div>
+                    <div className="icon-square">
+                        <div className="aaa"><div className="icon-group"><CashFlow className="icon-in" /></div><span className="icon-title-ad">חיזוק התזרים</span></div>
+                        <div className="aaa"><div className="icon-group"><SaveMoney className="icon-in" /></div><span className="icon-title-ad">הורדת עלויות ביטוח אשראי</span></div>
+                        <div className="aaa"> <div className="icon-group"><Refresh className="icon-in" /></div><span className="icon-title-ad">ייעול תהליכים והקטנת עומסים</span></div>
+                        <div className="aaa"><div className="icon-group"><OneFingerClick className="icon-in" /></div><span className="icon-title-ad">קבלת מימון בלחיצה אחת</span></div>
+                    </div>
+                    <div className="icon-square">
+                        <div className="aaa"><div className="icon-group"><Corona className="icon-in" /></div><span className="icon-title-ad">הקטנת הסיכונים בעקבות הקורונה</span></div>
+                        <div className="aaa"><div className="icon-group"><Handshake className="icon-in" /></div><span className="icon-title-ad">חיזוק הקשר בין הצדדים</span></div>
+                        <div className="aaa"><div className="icon-group"><Lock className="icon-in" /></div><span className="icon-title-ad">ביטחון תזרימי</span></div>
+                        <div className="aaa"><div className="icon-group"><Competition className="icon-in" /></div><span className="icon-title-ad">חיזוק התזרים</span></div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <div className="partners">
+                <h2 className="partners-title">.השותפים לדרך</h2>
+                <div className="images-row">
+                    {partners.map(item => (<div className="image" style={{ backgroundImage: `url(${item})` }}></div>))}
+                </div>
+            </div>
+
+            <div className="articles">
+                <h2 className="articles-title">.מאמרים</h2>
+                <MediaControlCard image={abc} path="blogs/fintechNation/">
+                    <h2 className="card-title">אומת הפינטק: הזווית הישראלית של הטכנולוגיה הפיננסית</h2>
+                    <div className="card-text">
+                        באומת הסטארטפ היתה זו רק שאלה של זמן עד שהטכנולוגיה תפרוץ גם אל תוך העולם הפיננסי המסורתי. בשנים האחרונות תחום הפינטק נחשב לאחד התחומים המתפתחים ביותר ושירותים רבים של מוצרים פיננסיים בשלל תחומים כדוגמת סליקה, אמצעי תשלום, ניהול השקעות ואשראי עוברים טרנספורמציה בחסות הטכנולוגי</div>
+                </MediaControlCard>
+            </div>
+            <div className="articles-row">
+                <MediaControlCard><h2 className="card-title">העסק שלי והבנק: כלל הזהב לזוגיות מוצלחת</h2><div className="card-text">מעטים האנשים שיכולים לומר בפה מלא כי אינם חשים כל חשש בשעה שמכשיר הטלפון מצלצל ועל הצג מופיע השם של הבנקאי.</div></MediaControlCard>
+                <MediaControlCard><h2 className="card-title">חשיבות ההון החוזר לעסק חדש וקיים</h2><div className="card-text">בכדי לנהל עסק מצליח, לצד חזון ועבודה קשה, צריך להכיר את המספרים והמדדים אשר מרכיבים אותו מקרוב.</div></MediaControlCard>
+                <MediaControlCard><h2 className="card-title">דווקא עכשיו רוורס פקטורינג</h2><div className="card-text">בשעה שעומדים בפני התקשרות מול גופים גדולים, הספקים נדרשים לקחת בחשבון מראש פרמטרים רבים כדוגמת: העלות המימונית שלו.</div></MediaControlCard>
+            </div>
+            <div className="article-btn">
+                <Button variant="contained" style={{ backgroundColor: "#2f439a", padding: "7px 20px", fontFamily: '"Helvetica Hebrew",Sans-serif', fontSize: "20px", fontWeight: "700", width: "auto" }}><ChevronLeft />מאמרים נוספים </Button>
+            </div>
+
+            <div className="career-container">
+
+                <div className="career-title"><h3>.קריירה</h3></div>
+                <div className="career-content">
+                    <div className="career-photos">
+                        <img className="large-photo" src={interview} />
+                        <img className="small-photo" src={smiling} />
+                    </div >
+                    <div className="text-container">
+                        <div className="text-wrapper">
+                            <div className="career-second-title"><h3 style={{ margin: "0", lineHeight: "1" }}>.קריירה באפ קפיטל</h3></div>
+                            <div className="career-third-title"><p style={{ marginTop: "0", lineHeight: "1" }}> !מחפשת אותך Up Capital</p></div>
+                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}> .מביאה בשורה מהפכנית של חדשנות טכנולוגית שרותית ותפעולית לעולם האשראי החוץ בנקאי Up Capital</p></div>
+                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}>.ערכי החברה מושתתים על – אחדות המטרה, מקצוענות ומקצועיות, לימוד ושיפור תמידיים וחברות</p></div>
+                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}>.במידה ואתם מחפשים לגדול ולהתפתח, להיות חלק מחברה דינמית וחדשנית ומתחברים לערכי החברה – אתם מוזמנים לפנות אלינו</p></div>
+                        </div>
+                        <div className="jobs-btn">
+                            <Button variant="contained" href={careerPath} style={{ backgroundColor: "#2f439a", padding: "7px 20px", fontFamily: '"Helvetica Hebrew",Sans-serif', fontSize: "20px", fontWeight: "700", width: "auto" }}><ChevronLeft />משרות נוספות</Button>
+                        </div>
+                    </div>
+                </div>
+                <div className="job-offers">
+                    <div className="job-title-wrap">
+                        <h3 className="job-title">.משרות אחרונות</h3>
+                    </div>
+                    <div className="articles-row">
+                        <MediaControlCard>
+                            <h2 className="card-title">נציג/ת תפעול ושירות לקוחות</h2>
+                            <div className="card-text">.מתן שירות ומענה ללקוחות עסקיים במגוון נושאים פיננסיים, שיחות נכנסות ויוצאות במטרה להעמיק את הקשרים עם הלקוח, תמיכה וטיפול בתהליכים תפעוליים</div>
+                            <div className="job-details-wrap">
+                                <div className="job-details">מספר משרה: 102</div>
+                                <div className="job-details">מיקום המשרה: תל אביב</div>
+                                <div className="job-details">סוג המשרה: מלאה</div>
+                                <div className="job-details">תאריך אחרון להגשת מועמדות: 01/12/2021</div>
+                            </div>
+                        </MediaControlCard>
+                        <MediaControlCard>
+                            <h2 className="card-title">פקיד/ת הנהלת חשבונות</h2>
+                            <div className="card-text">.תפקיד כולל קליטת פקודות יומן ושקים כרטיסים, התאמות, תיוקים, קליטת חשבוניות, תשלומי חשבוניות לספקים, הכנת הוראות תשלום</div>
+                            <div className="job-details-wrap">
+                                <div className="job-details">מספר משרה: 201</div>
+                                <div className="job-details">מיקום המשרה: תל אביב</div>
+                                <div className="job-details">סוג המשרה: מלאה</div>
+                                <div className="job-details">תאריך אחרון להגשת מועמדות: 01/11/2021</div>
+                            </div>
+                        </MediaControlCard>
+                        <MediaControlCard>
+                            <h2 className="card-title">מנהל/ת דיגיטל</h2>
+                            <div className="card-text">.בניית מענה דיגיטלי שיתמוך בניהול דיאלוג מדויק ומבוסס נתונים עם מגוון סוגי הלקוחות, לאורך כל מסע הלקוח</div>
+                            <div className="job-details-wrap">
+                                <div className="job-details">מספר משרה: 301</div>
+                                <div className="job-details">מיקום המשרה: תל אביב</div>
+                                <div className="job-details">סוג המשרה: מלאה</div>
+                                <div className="job-details">תאריך אחרון להגשת מועמדות: 01/12/2021</div>
+                            </div>
+                        </MediaControlCard>
+
+                    </div>
+                </div>
+
+            </div >
+            <div className="contact">
+                <div></div>
+            </div>
+        </div >
     )
 };
 
