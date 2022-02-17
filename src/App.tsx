@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Layout from './layout/layout';
-import Navbar from './components/navbar';
 
 function App() {
+
+  // const [isScorlled, setIsScorlled] = useState(false)  
+
+  // useEffect(() => {
+  //   document.body.addEventListener('scroll', () => {
+  //  setIsScorlled(true)
+  //   })
+  //   return () => {
+  //     document.removeEventListener('scroll', () => {
+  //       setIsScorlled(false)
+  //     })
+  //   }
+  // }, [])
+
   return (
-   <div className='app-container'>
-     <Navbar/>
-     <Layout/>
+   <div className='app-container' >
+     <Layout />
      </div>
   );
 }

@@ -1,7 +1,10 @@
 * {
     box-sizing: border-box;
 }
-
+.container {
+    max-width: 1200px;
+    margin: auto
+}
 .home-jumbotron, .our-solution, .contact{
     height: 100vh;
     background-size: cover;
@@ -94,11 +97,11 @@
     width: 100%;
 }
 
-.our-solution-title, .partners-title, .articles-title, .career-title, .career-second-title, .job-title, .job-details {
+.our-solution-title, .partners-title, .articles-title, .career-title, .career-second-title, .job-title, .job-details, .icon-title {
     color: #2f439a;
 }
 
-.advantages-title {
+.advantages-title{
     color: white;
 }
 
@@ -111,7 +114,7 @@
     text-align: center;
 }
 
-.our-solution-title, .advantages-title, .articles-title, .career-title {
+.our-solution-title, .advantages-title, .articles-title, .career-title{
     font-family: "Helvetica Hebrew", Sans-serif;
     font-size: 42px;
     font-weight: 700;
@@ -130,7 +133,7 @@
 
 
 .our-solution-text {
-    color: #000080;
+    color: #2f439a;
     font-family: "Helvetica Hebrew", Sans-serif;
     font-size: 24px;
     font-weight: 400;
@@ -180,10 +183,6 @@
     object-fit: contain;
 }
 
-.icon-title {
-    color: #000080;
-}
-
 .icon-title-ad {
     color: #fff;
 }
@@ -222,7 +221,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
     margin: 50px;
 }
 
@@ -284,6 +282,7 @@
 
 .card-text {
     font-size: 18px;
+    color: #2f439a;
 
 }
 
@@ -303,7 +302,7 @@
 }
 
 .articles-row, .articles {
-    max-width: 1330px;
+    /* max-width: 1330px; */
 
 }
 
@@ -343,7 +342,7 @@
     max-width: 1370px;
     box-sizing: border-box;
     margin: auto;
-    padding: 0 20px 20px;
+    padding: 0 15px 20px;
     ;
 }
 
@@ -408,12 +407,7 @@
 }
 
 
-/* element.style {
-    --hgap: 15px;
-    --vgap: 15px;
-    --animation-duration: 350ms;
-    --columns: 8;
-    --rows: 1;
-    --aspect-ratio: 42.8571%;
-    --container-aspect-ratio: 4.72077%;
-} */
+
+@media (min-width:767px){
+
+}

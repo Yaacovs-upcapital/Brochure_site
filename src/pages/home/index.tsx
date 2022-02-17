@@ -10,16 +10,25 @@ import PrimeSec from "../../assets/images/prime-sec.png";
 import PWC from "../../assets/images/pwc.png";
 import Tadmor from "../../assets/images/tadmor.png";
 import MediaControlCard from "../../components/card";
-import abc from "../../assets/images/working-team.jpg";
+import workingteam from "../../assets/images/working-team.jpg";
 import interview from "../../assets/images/interview.webp"
 import smiling from "../../assets/images/smiling.webp"
 import { Button } from "@mui/material";
 import ChevronLeft from "@mui/icons-material/ChevronLeft";
+import ContactForm from "../../components/contactForm";
+import Carousel from "react-elastic-carousel";
+import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+
 
 
 const partners = [Obelisk, Oracle, PrimeSec, Erech, BDO, Deloitte, Tadmor, PWC]
 const careerPath = "../career"
 const Home = () => {
+
+    const matches = useMediaQuery('(min-width: 767px)');
+
     return (
         <div className="page-container">
             <div className="home-jumbotron">
@@ -40,7 +49,7 @@ const Home = () => {
             </div>
 
             <div className="our-solution" id="down">
-                <div>
+                <div className="container">
                     <div className="our-solution-content">
                         <h2 className="our-solution-title">.הפתרון שלנו</h2>
                         <p className="our-solution-text" >פתרון בעיית תזרים מזומנים לעסקים (שוטף פלוס) באמצעות שיטה ייחודית וטכנולוגיה מתקדמת היוצרת דרכי מימון חדשות בשוק</p>
@@ -54,8 +63,16 @@ const Home = () => {
             </div>
 
             <div className="advantages">
-                <div className="advantages-content">
+                <div className="advantages-content container">
                     <h2 className="advantages-title">.היתרונות שלנו</h2>
+                    <MobileView>
+                    <Carousel isRTL={true} itemsToShow={2} pagination={false}>
+                        <div className="aaa"><div className="icon-group"><SaveMoney className="icon-in" /></div><span className="icon-title-ad">הורדת עלויות ביטוח אשראי</span></div>
+                        <div className="aaa"> <div className="icon-group"><Refresh className="icon-in" /></div><span className="icon-title-ad">ייעול תהליכים והקטנת עומסים</span></div>
+                        <div className="aaa"><div className="icon-group"><OneFingerClick className="icon-in" /></div><span className="icon-title-ad">קבלת מימון בלחיצה אחת</span></div>
+                        <div className="aaa"><div className="icon-group"><OneFingerClick className="icon-in" /></div><span className="icon-title-ad">קבלת מימון בלחיצה אחת</span></div>
+                    </Carousel>
+                    </MobileView>
                     <div className="icon-square">
                         <div className="aaa"><div className="icon-group"><CashFlow className="icon-in" /></div><span className="icon-title-ad">חיזוק התזרים</span></div>
                         <div className="aaa"><div className="icon-group"><SaveMoney className="icon-in" /></div><span className="icon-title-ad">הורדת עלויות ביטוח אשראי</span></div>
@@ -71,22 +88,22 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="partners">
+            <div className="partners container">
                 <h2 className="partners-title">.השותפים לדרך</h2>
                 <div className="images-row">
                     {partners.map(item => (<div className="image" style={{ backgroundImage: `url(${item})` }}></div>))}
                 </div>
             </div>
 
-            <div className="articles">
+            <div className="articles container">
                 <h2 className="articles-title">.מאמרים</h2>
-                <MediaControlCard image={abc} path="blogs/fintechNation/">
+                <MediaControlCard image={workingteam} path="/fintechNation">
                     <h2 className="card-title">אומת הפינטק: הזווית הישראלית של הטכנולוגיה הפיננסית</h2>
                     <div className="card-text">
                         באומת הסטארטפ היתה זו רק שאלה של זמן עד שהטכנולוגיה תפרוץ גם אל תוך העולם הפיננסי המסורתי. בשנים האחרונות תחום הפינטק נחשב לאחד התחומים המתפתחים ביותר ושירותים רבים של מוצרים פיננסיים בשלל תחומים כדוגמת סליקה, אמצעי תשלום, ניהול השקעות ואשראי עוברים טרנספורמציה בחסות הטכנולוגי</div>
                 </MediaControlCard>
             </div>
-            <div className="articles-row">
+            <div className="articles-row container">
                 <MediaControlCard><h2 className="card-title">העסק שלי והבנק: כלל הזהב לזוגיות מוצלחת</h2><div className="card-text">מעטים האנשים שיכולים לומר בפה מלא כי אינם חשים כל חשש בשעה שמכשיר הטלפון מצלצל ועל הצג מופיע השם של הבנקאי.</div></MediaControlCard>
                 <MediaControlCard><h2 className="card-title">חשיבות ההון החוזר לעסק חדש וקיים</h2><div className="card-text">בכדי לנהל עסק מצליח, לצד חזון ועבודה קשה, צריך להכיר את המספרים והמדדים אשר מרכיבים אותו מקרוב.</div></MediaControlCard>
                 <MediaControlCard><h2 className="card-title">דווקא עכשיו רוורס פקטורינג</h2><div className="card-text">בשעה שעומדים בפני התקשרות מול גופים גדולים, הספקים נדרשים לקחת בחשבון מראש פרמטרים רבים כדוגמת: העלות המימונית שלו.</div></MediaControlCard>
@@ -95,7 +112,7 @@ const Home = () => {
                 <Button variant="contained" style={{ backgroundColor: "#2f439a", padding: "7px 20px", fontFamily: '"Helvetica Hebrew",Sans-serif', fontSize: "20px", fontWeight: "700", width: "auto" }}><ChevronLeft />מאמרים נוספים </Button>
             </div>
 
-            <div className="career-container">
+            <div className="career-container container">
 
                 <div className="career-title"><h3>.קריירה</h3></div>
                 <div className="career-content">
@@ -116,7 +133,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className="job-offers">
+                <div className="job-offers container">
                     <div className="job-title-wrap">
                         <h3 className="job-title">.משרות אחרונות</h3>
                     </div>
@@ -157,7 +174,7 @@ const Home = () => {
 
             </div >
             <div className="contact">
-                <div></div>
+                <div><ContactForm/></div>
             </div>
         </div >
     )
