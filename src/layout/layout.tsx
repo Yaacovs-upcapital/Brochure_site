@@ -9,18 +9,18 @@ import Solution from "../pages/solution";
 import Navbar from "../components/navbar";
 
 const Layout = () => {
+    
     return (
         <BrowserRouter>
             <Navbar />
             <Routes>
-
                 <Route path="/" element={<Home />} />
                 <Route path="/our-solution/" element={<Solution />} />
-                <Route path="/about-us" element={<About />} />
+                <Route path="/about-us/" element={<About />} />
                 <Route path="/blog/" element={<Blog />} />
                 <Route path="/career/" element={<Career />} />
                 <Route path="/contact-us/" element={<ContactUs />} />
-                <Route path="/fintechNation/" element={<FintechNation />} />
+                <Route path="/blog/:id/" element={<FintechNation />} />
 
             </Routes>
         </BrowserRouter>

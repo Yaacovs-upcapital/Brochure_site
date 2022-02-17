@@ -97,16 +97,16 @@ const Home = () => {
 
             <div className="articles container">
                 <h2 className="articles-title">.מאמרים</h2>
-                <MediaControlCard image={workingteam} path="/fintechNation">
+                <MediaControlCard image={workingteam} path="/blog/:אומת+הפינטק/">
                     <h2 className="card-title">אומת הפינטק: הזווית הישראלית של הטכנולוגיה הפיננסית</h2>
                     <div className="card-text">
                         באומת הסטארטפ היתה זו רק שאלה של זמן עד שהטכנולוגיה תפרוץ גם אל תוך העולם הפיננסי המסורתי. בשנים האחרונות תחום הפינטק נחשב לאחד התחומים המתפתחים ביותר ושירותים רבים של מוצרים פיננסיים בשלל תחומים כדוגמת סליקה, אמצעי תשלום, ניהול השקעות ואשראי עוברים טרנספורמציה בחסות הטכנולוגי</div>
                 </MediaControlCard>
             </div>
             <div className="articles-row container">
-                <MediaControlCard><h2 className="card-title">העסק שלי והבנק: כלל הזהב לזוגיות מוצלחת</h2><div className="card-text">מעטים האנשים שיכולים לומר בפה מלא כי אינם חשים כל חשש בשעה שמכשיר הטלפון מצלצל ועל הצג מופיע השם של הבנקאי.</div></MediaControlCard>
-                <MediaControlCard><h2 className="card-title">חשיבות ההון החוזר לעסק חדש וקיים</h2><div className="card-text">בכדי לנהל עסק מצליח, לצד חזון ועבודה קשה, צריך להכיר את המספרים והמדדים אשר מרכיבים אותו מקרוב.</div></MediaControlCard>
-                <MediaControlCard><h2 className="card-title">דווקא עכשיו רוורס פקטורינג</h2><div className="card-text">בשעה שעומדים בפני התקשרות מול גופים גדולים, הספקים נדרשים לקחת בחשבון מראש פרמטרים רבים כדוגמת: העלות המימונית שלו.</div></MediaControlCard>
+                <MediaControlCard path="/blog/:העסק+שלי+והבנק/"><h2 className="card-title">העסק שלי והבנק: כלל הזהב לזוגיות מוצלחת</h2><div className="card-text">מעטים האנשים שיכולים לומר בפה מלא כי אינם חשים כל חשש בשעה שמכשיר הטלפון מצלצל ועל הצג מופיע השם של הבנקאי.</div></MediaControlCard>
+                <MediaControlCard path="/blog/:חשיבות+ההון+החוזר/"><h2 className="card-title">חשיבות ההון החוזר לעסק חדש וקיים</h2><div className="card-text">בכדי לנהל עסק מצליח, לצד חזון ועבודה קשה, צריך להכיר את המספרים והמדדים אשר מרכיבים אותו מקרוב.</div></MediaControlCard>
+                <MediaControlCard path="/blog/:רוורס+פקטורינג/"><h2 className="card-title">דווקא עכשיו רוורס פקטורינג</h2><div className="card-text">בשעה שעומדים בפני התקשרות מול גופים גדולים, הספקים נדרשים לקחת בחשבון מראש פרמטרים רבים כדוגמת: העלות המימונית שלו.</div></MediaControlCard>
             </div>
             <div className="article-btn">
                 <Button variant="contained" style={{ backgroundColor: "#2f439a", padding: "7px 20px", fontFamily: '"Helvetica Hebrew",Sans-serif', fontSize: "20px", fontWeight: "700", width: "auto" }}><ChevronLeft />מאמרים נוספים </Button>
