@@ -7,9 +7,13 @@ import FintechNation from "../pages/fintechNation";
 import Home from "../pages/home";
 import Solution from "../pages/solution";
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
+import JobOffer from "../pages/jobOffer";
+import TermOfUse from "../pages/termsOfUse";
+import PrivacyPolicy from "../pages/policy";
+import ClientLogin from "../pages/clientLogin";
 
 const Layout = () => {
-    
     return (
         <BrowserRouter>
             <Navbar />
@@ -21,8 +25,12 @@ const Layout = () => {
                 <Route path="/career/" element={<Career />} />
                 <Route path="/contact-us/" element={<ContactUs />} />
                 <Route path="/blog/:id/" element={<FintechNation />} />
-
+                <Route path="/job-offer/" element={<JobOffer />} />
+                <Route path="/terms-of-use/" element={<TermOfUse/>} />
+                <Route path="/privacy-policy/" element={<PrivacyPolicy/>} />
+                <Route path="/app/" element={<ClientLogin/>} />
             </Routes>
+            <Footer/>
         </BrowserRouter>
     );
 };

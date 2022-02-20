@@ -44,7 +44,7 @@ input, textarea{
     width: 100%;
     border-color: #2f439a;
     border-radius:3px;
-    border: 1px solid #2f439a !important;
+    border: 1px solid #2f439a ;
     color:#2f439a;
     padding: 10px;
     text-align: right;
@@ -70,3 +70,13 @@ input, textarea{
     text-align: center;
     font-size: 18px;
   }
+
+  textarea {
+    overflow: auto;
+    resize: vertical;
+
+}
+
+::placeholder{
+    color: #2f439a;
+}

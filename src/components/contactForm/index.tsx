@@ -10,7 +10,7 @@ const ContactForm = () => {
         >.צור קשר</h2>
         <p className="second-title">:לפרטים נוספים השאירו פרטיכם בטופס</p>
       </div>
-      <div style={{ width:"1000px" }}>
+      <div style={{ width:"1000px" }} className='form-content'>
         <Card style={{ borderRadius: "20px", padding: "50px 30px"  }}>
           <div style={{ display: "flex" }}>
             <div style={{ width: "60%", padding: "0 30px" }}>

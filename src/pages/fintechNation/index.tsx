@@ -5,9 +5,9 @@ import { useParams } from "react-router-dom";
 
 const FintechNation = () => {
   const blogId = useParams();
-  console.log(">>>>>", blogId.id);
+  //console.log(">>>>>", blogId.id);
   const blogIndex = blogs.findIndex(
-    ({ bID }) => blogId.id == `:${bID}`
+    ({ bID }) => blogId.id === `:${bID}`
   )
  /// console.log(">>>>>", JSON.stringify(blogIndex));
   return (

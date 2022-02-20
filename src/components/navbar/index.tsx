@@ -3,8 +3,7 @@ import { LogoWhite } from "../../assets/icons"
 import { LogoBlue } from "../../assets/icons"
 import { Link, NavLink } from "react-router-dom"
 import{ useEffect, useState } from 'react';
-import { styled } from "@mui/material";
-import { light } from "@mui/material/styles/createPalette";
+
 
 
 const Navbar = () => {
@@ -33,8 +32,8 @@ const Navbar = () => {
           <li><NavLink to={"/blog/"} className="link">מאמרים</NavLink></li>
           <li><NavLink to={"/career/"} className="link">קריירה</NavLink></li>
           <li><NavLink to={"/contact-us/"} className="link">צור קשר</NavLink></li>
-          <li><NavLink to={"/"} className="link-button">ספקים</NavLink></li>
-          <li className="list-item"><NavLink to={"/"} className="link-button">קניינים</NavLink></li>
+          <li><NavLink to={"/app/"} className="link-button">ספקים</NavLink></li>
+          <li ><NavLink to={"/app/"} className="link-button">קניינים</NavLink></li>
         </ul>
       </div></div>
   )

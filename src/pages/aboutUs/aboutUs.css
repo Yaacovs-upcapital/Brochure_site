@@ -1,0 +1,31 @@
+.member-title, .team-title{
+    font-size: 1.4rem;
+text-align: center;
+}
+
+.member-title, .member-description, .team-title{
+    color: #2f439a;
+
+}
+
+ .member-description{
+    max-width: 1000;
+    text-align: justify;
+    padding: 0 30px;
+
+}
+
+.team-container{
+    display: flex;
+    direction: rtl;
+}
+
+.member-image{
+    border-radius: 70px;
+    width: 174px;
+    height: 210px;
+}
+
+.img-wrap{
+    text-align: center;
+}

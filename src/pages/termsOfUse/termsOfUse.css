@@ -1,0 +1,15 @@
+
+.terms-container  {
+  text-align: justify;
+  line-height: 1.5em;
+  font-weight: 500;
+  color: #2f439a;
+  margin-bottom: 100px;
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-title {
+  text-decoration: underline;
+}
