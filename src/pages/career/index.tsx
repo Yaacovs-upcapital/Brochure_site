@@ -32,7 +32,7 @@ const Career = () => {
                         <h3 className="job-title">משרות אחרונות.</h3>
                     </div>
                     <div className="articles-row">
-                        <MediaControlCard path = "jobOffer">
+                        <MediaControlCard path = "/job-offer/:102/">
                             <h2 className="card-title">נציג/ת תפעול ושירות לקוחות</h2>
                             <div className="card-text">מתן שירות ומענה ללקוחות עסקיים במגוון נושאים פיננסיים, שיחות נכנסות ויוצאות במטרה להעמיק את הקשרים עם הלקוח, תמיכה וטיפול בתהליכים תפעוליים.</div>
                             <div className="job-details-wrap">
@@ -42,7 +42,7 @@ const Career = () => {
                                 <div className="job-details">תאריך אחרון להגשת מועמדות: 01/12/2021</div>
                             </div>
                         </MediaControlCard>
-                        <MediaControlCard path = "/job-offer/">
+                        <MediaControlCard path = "/job-offer/:201/">
                             <h2 className="card-title">פקיד/ת הנהלת חשבונות</h2>
                             <div className="card-text">תפקיד כולל קליטת פקודות יומן ושקים כרטיסים, התאמות, תיוקים, קליטת חשבוניות, תשלומי חשבוניות לספקים, הכנת הוראות תשלום.</div>
                             <div className="job-details-wrap">
@@ -52,7 +52,7 @@ const Career = () => {
                                 <div className="job-details">תאריך אחרון להגשת מועמדות: 01/11/2021</div>
                             </div>
                         </MediaControlCard>
-                        <MediaControlCard>
+                        <MediaControlCard path = "/job-offer/:301/">
                             <h2 className="card-title">מנהל/ת דיגיטל</h2>
                             <div className="card-text">בניית מענה דיגיטלי שיתמוך בניהול דיאלוג מדויק ומבוסס נתונים עם מגוון סוגי הלקוחות, לאורך כל מסע הלקוח.</div>
                             <div className="job-details-wrap">
@@ -67,15 +67,15 @@ const Career = () => {
                     </div>
                 </div>
                 <div style={{width:"30%", marginTop:"50px"}}>
-                    <MediaControlCard>
-                        <h2 className="card-title">מנהל/ת דיגיטל</h2>
+                    <MediaControlCard path='/job-offer/:101/'>
+                        <h2 className="card-title">נציגי/ות שירות ומכירות</h2>
                         <div className="card-text">לתפקיד הכולל מתן מענה טלפוני ללקוחות החברה בנושאים מגוונים בעולמות הפיננסיים ומכירת פתרונות פיננסיים.
                         </div>
                         <div className="job-details-wrap">
-                            <div className="job-details">מספר משרה: 301</div>
+                            <div className="job-details">מספר משרה: 101</div>
                             <div className="job-details">מיקום המשרה: תל אביב</div>
                             <div className="job-details">סוג המשרה: מלאה</div>
-                            <div className="job-details">תאריך אחרון להגשת מועמדות: 01/12/2021</div>
+                            <div className="job-details">תאריך אחרון להגשת מועמדות: 01/11/2021</div>
                         </div>
                     </MediaControlCard>
                 </div></div>

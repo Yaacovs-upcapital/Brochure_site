@@ -1,4 +1,4 @@
-import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import { Routes, Route, Link, BrowserRouter, useLocation } from "react-router-dom";
 import About from "../pages/aboutUs";
 import Blog from "../pages/blog";
 import Career from "../pages/career";
@@ -12,12 +12,28 @@ import JobOffer from "../pages/jobOffer";
 import TermOfUse from "../pages/termsOfUse";
 import PrivacyPolicy from "../pages/policy";
 import ClientLogin from "../pages/clientLogin";
+import { useEffect, useState } from "react";
+
+export function ScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
 
 const Layout = () => {
+
+
+
     return (
-        <BrowserRouter>
+        <BrowserRouter  >
             <Navbar />
-            <Routes>
+            <ScrollToTop />
+
+            <Routes >
                 <Route path="/" element={<Home />} />
                 <Route path="/our-solution/" element={<Solution />} />
                 <Route path="/about-us/" element={<About />} />
@@ -25,12 +41,12 @@ const Layout = () => {
                 <Route path="/career/" element={<Career />} />
                 <Route path="/contact-us/" element={<ContactUs />} />
                 <Route path="/blog/:id/" element={<FintechNation />} />
-                <Route path="/job-offer/" element={<JobOffer />} />
-                <Route path="/terms-of-use/" element={<TermOfUse/>} />
-                <Route path="/privacy-policy/" element={<PrivacyPolicy/>} />
-                <Route path="/app/" element={<ClientLogin/>} />
+                <Route path="/job-offer/:id/" element={<JobOffer />} />
+                <Route path="/terms-of-use/" element={<TermOfUse />} />
+                <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
+                <Route path="/app/" element={<ClientLogin />} />
             </Routes>
-            <Footer/>
+            <Footer />
         </BrowserRouter>
     );
 };
