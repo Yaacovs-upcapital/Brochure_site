@@ -13,3 +13,19 @@
   grid-column-gap: 40px;
   grid-row-gap: 40px;
 }
+
+@media (max-width:768px) {
+  .blogs-wrap{
+    display: block;
+  }
+
+  .single-aricle-title{
+text-align: center;
+  }
+
+  .ar-text{
+    font-size: 0.9em;
+    width: 70%;
+    margin: auto;
+  }
+}

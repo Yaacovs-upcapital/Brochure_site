@@ -9,7 +9,7 @@ const Solution = () => {
         <div>
 
             <div className="bg-img">
-                <h1>הפתרון שלנו</h1>
+                <h1 className='solution-title'>הפתרון שלנו</h1>
             </div>
             <div className="career-content">
                 <div className="career-photos">
@@ -18,7 +18,7 @@ const Solution = () => {
                 </div >
                 <div className="text-container">
                     <div className="text-wrapper">
-                        <div className="career-second-title"><h3 style={{ lineHeight: "1" }}>.רקע</h3></div>
+                        <div className="career-second-title"><h3 style={{ lineHeight: "1" }}>רקע.</h3></div>
                         <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1", textAlign: "justify", direction:"rtl"}}> בכל רגע נתון ברחבי העולם, קיימים כ-54 טריליון דולרים ב"שוטף פלוס" כלומר, כסף שנמצא במצב ביניים בין ספקים ללקוחות. רק בישראל הסכום המוערך עומד על למעלה מ-50 מיליארד דולרים.</p></div>
                         <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1", textAlign: "justify", direction:"rtl" }}><strong>מדובר בהון חוזר, לא נגיש, לא נזיל ולא מנוצל.</strong></p></div>
                         <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1", textAlign: "justify", direction:"rtl" }}>נגישות להון הזה תאפשר לייצר מציאות כלכלית חדשה לעסקים, בעיקר קטנים ובינוניים, ותאפשר להם לגדול ולהתפתח, והרי צמיחה של העסקים הקטנים והבינונים אשר נחשבים ל"קטר" של הכלכלה, בכוחה לייצר מציאות כלכלית חדשה למדינה כולה.</p></div>

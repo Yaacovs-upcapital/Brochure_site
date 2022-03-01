@@ -1,5 +1,4 @@
 import "./home.css"
-import Navbar from "../../components/navbar";
 import { LogoWhite, Arrow, Chart, Clock, Smartphone, CashFlow, Competition, Corona, Handshake, Refresh, SaveMoney, OneFingerClick, Lock } from "../../assets/icons";
 import Deloitte from "../../assets/images/deloitte-digital.png";
 import Erech from "../../assets/images/erechlogo.png";
@@ -17,17 +16,52 @@ import { Button } from "@mui/material";
 import ChevronLeft from "@mui/icons-material/ChevronLeft";
 import ContactForm from "../../components/contactForm";
 import Carousel from "react-elastic-carousel";
-import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import useWindowSize from "../../components/windowSize";
+import { useRef } from "react";
+import Slider from 'infinite-react-carousel';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { NoEncryption } from "@mui/icons-material";
+import { NavLink } from "react-router-dom";
 
-
-
-
-const partners = [Obelisk, Oracle, PrimeSec, Erech, BDO, Deloitte, Tadmor, PWC]
+const partners = [Obelisk, Oracle,   PrimeSec, Erech, BDO, Deloitte, Tadmor, PWC]
 const careerPath = "../career"
+
+const carouselItems = [
+    <div className="advantage-item"><div className="icon-group"><CashFlow className="icon-in" /></div><span className="icon-title-ad">חיזוק התזרים</span></div>,
+    <div className="advantage-item"><div className="icon-group"><SaveMoney className="icon-in" /></div><span className="icon-title-ad">הורדת עלויות ביטוח אשראי</span></div>,
+    <div className="advantage-item"> <div className="icon-group"><Refresh className="icon-in" /></div><span className="icon-title-ad">ייעול תהליכים והקטנת עומסים</span></div>,
+    <div className="advantage-item"><div className="icon-group"><OneFingerClick className="icon-in" /></div><span className="icon-title-ad">קבלת מימון בלחיצה אחת</span></div>,
+    <div className="advantage-item"><div className="icon-group"><Corona className="icon-in" /></div><span className="icon-title-ad">הקטנת הסיכונים בעקבות הקורונה</span></div>,
+    <div className="advantage-item"><div className="icon-group"><Handshake className="icon-in" /></div><span className="icon-title-ad">חיזוק הקשר בין הצדדים</span></div>,
+    <div className="advantage-item"><div className="icon-group"><Lock className="icon-in" /></div><span className="icon-title-ad">ביטחון תזרימי</span></div>,
+    <div className="advantage-item"><div className="icon-group"><Competition className="icon-in" /></div><span className="icon-title-ad">חיזוק התזרים</span></div>,
+]
+
+
 const Home = () => {
 
-    const matches = useMediaQuery('(min-width: 767px)');
+
+    const settings = {
+       autoplay: true,
+       autoplaySpeed: 5000,
+        slidesPerRow: 2,
+        dots: true,
+        prevArrow: <div style={{ margin: "0", position: "absolute" }}><ArrowBackIosNewIcon style={{ color: "#fff" }} /></div>,
+        nextArrow: <div style={{ margin: "0", position: "absolute" }}><ArrowForwardIosIcon style={{ color: "#fff" }} /></div>,
+   
+    };
+
+    const settings1 = {
+        autoplay: true,
+        autoplaySpeed: 5000,
+        slidesPerRow: 4,
+        dots: true,
+        arrows: false, 
+    };
+
+    
+
 
     return (
         <div className="page-container">
@@ -42,63 +76,60 @@ const Home = () => {
                         <h1>עולם חדש של תנאי תשלום</h1>
                         <h1> לטובת כל הצדדים</h1>
                     </div>
-                    <a className="arrow-link" href="#down">
+                    <div className="arrow-link" >
                         <Arrow className="arrow-icon" />
-                    </a>
+                    </div>
                 </div>
             </div>
 
-            <div className="our-solution" id="down">
+            <div className="our-solution" >
                 <div className="container">
                     <div className="our-solution-content">
                         <h2 className="our-solution-title">.הפתרון שלנו</h2>
                         <p className="our-solution-text" >פתרון בעיית תזרים מזומנים לעסקים (שוטף פלוס) באמצעות שיטה ייחודית וטכנולוגיה מתקדמת היוצרת דרכי מימון חדשות בשוק</p>
                     </div>
                     <div className="icons-row">
-                        <div className="icon-wrap"><a href="" ><Chart className="chart" /></a> <span className="icon-title">כולם מרוויחים</span></div>
-                        <div className="icon-wrap"><a href="" ><Clock className="clock" /></a><span className="icon-title">מנוהל באופן מלא</span></div>
-                        <div className="icon-wrap"><a href="" ><Smartphone className="smartphone" /></a><span className="icon-title">דיגיטלי בקליק אחד</span></div>
+                        <div className="icon-wrap"><div  className="circle"><Chart className="solution-icon" /></div> <span className="icon-title">כולם מרוויחים</span></div>
+                        <div className="icon-wrap"><div   className="circle"><Clock className="solution-icon" /></div><span className="icon-title">מנוהל באופן מלא</span></div>
+                        <div className="icon-wrap"><div  className="circle"><Smartphone className="solution-icon" /></div><span className="icon-title">דיגיטלי בקליק אחד</span></div>
                     </div>
                 </div>
             </div>
-
             <div className="advantages">
-                <div className="advantages-content container">
+                <div className="advantages-content">
                     <h2 className="advantages-title">.היתרונות שלנו</h2>
-                    <MobileView>
-                    <Carousel isRTL={true} itemsToShow={2} pagination={false}>
-                        <div className="aaa"><div className="icon-group"><SaveMoney className="icon-in" /></div><span className="icon-title-ad">הורדת עלויות ביטוח אשראי</span></div>
-                        <div className="aaa"> <div className="icon-group"><Refresh className="icon-in" /></div><span className="icon-title-ad">ייעול תהליכים והקטנת עומסים</span></div>
-                        <div className="aaa"><div className="icon-group"><OneFingerClick className="icon-in" /></div><span className="icon-title-ad">קבלת מימון בלחיצה אחת</span></div>
-                        <div className="aaa"><div className="icon-group"><OneFingerClick className="icon-in" /></div><span className="icon-title-ad">קבלת מימון בלחיצה אחת</span></div>
-                    </Carousel>
-                    </MobileView>
-                    <div className="icon-square">
-                        <div className="aaa"><div className="icon-group"><CashFlow className="icon-in" /></div><span className="icon-title-ad">חיזוק התזרים</span></div>
-                        <div className="aaa"><div className="icon-group"><SaveMoney className="icon-in" /></div><span className="icon-title-ad">הורדת עלויות ביטוח אשראי</span></div>
-                        <div className="aaa"> <div className="icon-group"><Refresh className="icon-in" /></div><span className="icon-title-ad">ייעול תהליכים והקטנת עומסים</span></div>
-                        <div className="aaa"><div className="icon-group"><OneFingerClick className="icon-in" /></div><span className="icon-title-ad">קבלת מימון בלחיצה אחת</span></div>
-                    </div>
-                    <div className="icon-square">
-                        <div className="aaa"><div className="icon-group"><Corona className="icon-in" /></div><span className="icon-title-ad">הקטנת הסיכונים בעקבות הקורונה</span></div>
-                        <div className="aaa"><div className="icon-group"><Handshake className="icon-in" /></div><span className="icon-title-ad">חיזוק הקשר בין הצדדים</span></div>
-                        <div className="aaa"><div className="icon-group"><Lock className="icon-in" /></div><span className="icon-title-ad">ביטחון תזרימי</span></div>
-                        <div className="aaa"><div className="icon-group"><Competition className="icon-in" /></div><span className="icon-title-ad">חיזוק התזרים</span></div>
-                    </div>
+                    {useWindowSize() <= 767 ?
+                        <div className="carousel-wrapper">
+                            <Slider {...settings}>
+                                {carouselItems.map(item => <div >{item}</div>)}
+                            </Slider>
+                        </div> :
+                        <div className="icon-square">
+                            {carouselItems.map(item => <div>{item}</div>)}
+                        </div>}
                 </div>
             </div>
 
-            <div className="partners container">
+            <div className="partners container" >
                 <h2 className="partners-title">.השותפים לדרך</h2>
-                <div className="images-row">
-                    {partners.map(item => (<div className="image" style={{ backgroundImage: `url(${item})` }}></div>))}
-                </div>
+                {useWindowSize() <= 767 ?
+                    <div className="carousel-wrapper">
+                        <Slider {...settings1}>
+                            {partners.map(item => (<div className="carousel-item-dv" ><img  className="image-carousel" src={`${item}`}/></div>))}
+
+                        </Slider>
+                    </div>
+                    :
+                    <div className="images-row">
+                        {partners.map(item => (<div className="image" style={{ backgroundImage: `url(${item})` }}></div>))}
+                    </div>}
             </div>
+
 
             <div className="articles container">
                 <h2 className="articles-title">.מאמרים</h2>
                 <MediaControlCard image={workingteam} path="/blog/:אומת+הפינטק/">
-                    <h2 className="card-title">אומת הפינטק: הזווית הישראלית של הטכנולוגיה הפיננסית</h2>
+                    <h2 className="card-title" >אומת הפינטק: הזווית הישראלית של הטכנולוגיה הפיננסית</h2>
                     <div className="card-text">
                         באומת הסטארטפ היתה זו רק שאלה של זמן עד שהטכנולוגיה תפרוץ גם אל תוך העולם הפיננסי המסורתי. בשנים האחרונות תחום הפינטק נחשב לאחד התחומים המתפתחים ביותר ושירותים רבים של מוצרים פיננסיים בשלל תחומים כדוגמת סליקה, אמצעי תשלום, ניהול השקעות ואשראי עוברים טרנספורמציה בחסות הטכנולוגי</div>
                 </MediaControlCard>
@@ -109,7 +140,7 @@ const Home = () => {
                 <MediaControlCard path="/blog/:רוורס+פקטורינג/"><h2 className="card-title">דווקא עכשיו רוורס פקטורינג</h2><div className="card-text">בשעה שעומדים בפני התקשרות מול גופים גדולים, הספקים נדרשים לקחת בחשבון מראש פרמטרים רבים כדוגמת: העלות המימונית שלו.</div></MediaControlCard>
             </div>
             <div className="article-btn">
-                <Button variant="contained" style={{ backgroundColor: "#2f439a", padding: "7px 20px", fontFamily: '"Helvetica Hebrew",Sans-serif', fontSize: "20px", fontWeight: "700", width: "auto" }}><ChevronLeft />מאמרים נוספים </Button>
+                <NavLink  to="./blog/" className="articles-btn"><ChevronLeft />מאמרים נוספים </NavLink>
             </div>
 
             <div className="career-container container">
@@ -122,14 +153,14 @@ const Home = () => {
                     </div >
                     <div className="text-container">
                         <div className="text-wrapper">
-                            <div className="career-second-title"><h3 style={{ margin: "0", lineHeight: "1" }}>.קריירה באפ קפיטל</h3></div>
-                            <div className="career-third-title"><p style={{ marginTop: "0", lineHeight: "1" }}> !מחפשת אותך Up Capital</p></div>
-                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}> .מביאה בשורה מהפכנית של חדשנות טכנולוגית שרותית ותפעולית לעולם האשראי החוץ בנקאי Up Capital</p></div>
-                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}>.ערכי החברה מושתתים על – אחדות המטרה, מקצוענות ומקצועיות, לימוד ושיפור תמידיים וחברות</p></div>
-                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}>.במידה ואתם מחפשים לגדול ולהתפתח, להיות חלק מחברה דינמית וחדשנית ומתחברים לערכי החברה – אתם מוזמנים לפנות אלינו</p></div>
+                            <div className="career-second-title"><h3 style={{ margin: "0", lineHeight: "1" }}>קריירה באפ קפיטל.</h3></div>
+                            <div className="career-third-title"><p style={{ marginTop: "0", lineHeight: "1" }}>Up Capital מחפשת אותך !</p></div>
+                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}>Up Capital מביאה בשורה מהפכנית של חדשנות טכנולוגית שרותית ותפעולית לעולם האשראי החוץ בנקאי .</p></div>
+                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}>ערכי החברה מושתתים על – אחדות המטרה, מקצוענות ומקצועיות, לימוד ושיפור תמידיים וחברות.</p></div>
+                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}>במידה ואתם מחפשים לגדול ולהתפתח, להיות חלק מחברה דינמית וחדשנית ומתחברים לערכי החברה – אתם מוזמנים לפנות אלינו.</p></div>
                         </div>
                         <div className="jobs-btn">
-                            <Button variant="contained" href={careerPath} style={{ backgroundColor: "#2f439a", padding: "7px 20px", fontFamily: '"Helvetica Hebrew",Sans-serif', fontSize: "20px", fontWeight: "700", width: "auto" }}><ChevronLeft />משרות נוספות</Button>
+                            <Button variant="contained" href={careerPath} style={{ backgroundColor: "#2f439a", padding: "7px 20px", fontFamily: '"Helvetica Hebrew",Sans-serif', fontSize: "20px", fontWeight: "700", width: "auto" }}>משרות נוספות<ChevronLeft /></Button>
                         </div>
                     </div>
                 </div>
@@ -140,7 +171,7 @@ const Home = () => {
                     <div className="articles-row">
                         <MediaControlCard>
                             <h2 className="card-title">נציג/ת תפעול ושירות לקוחות</h2>
-                            <div className="card-text">.מתן שירות ומענה ללקוחות עסקיים במגוון נושאים פיננסיים, שיחות נכנסות ויוצאות במטרה להעמיק את הקשרים עם הלקוח, תמיכה וטיפול בתהליכים תפעוליים</div>
+                            <div className="card-text">מתן שירות ומענה ללקוחות עסקיים במגוון נושאים פיננסיים, שיחות נכנסות ויוצאות במטרה להעמיק את הקשרים עם הלקוח, תמיכה וטיפול בתהליכים תפעוליים.</div>
                             <div className="job-details-wrap">
                                 <div className="job-details">מספר משרה: 102</div>
                                 <div className="job-details">מיקום המשרה: תל אביב</div>
@@ -150,7 +181,7 @@ const Home = () => {
                         </MediaControlCard>
                         <MediaControlCard>
                             <h2 className="card-title">פקיד/ת הנהלת חשבונות</h2>
-                            <div className="card-text">.תפקיד כולל קליטת פקודות יומן ושקים כרטיסים, התאמות, תיוקים, קליטת חשבוניות, תשלומי חשבוניות לספקים, הכנת הוראות תשלום</div>
+                            <div className="card-text">תפקיד כולל קליטת פקודות יומן ושקים כרטיסים, התאמות, תיוקים, קליטת חשבוניות, תשלומי חשבוניות לספקים, הכנת הוראות תשלום.</div>
                             <div className="job-details-wrap">
                                 <div className="job-details">מספר משרה: 201</div>
                                 <div className="job-details">מיקום המשרה: תל אביב</div>
@@ -160,7 +191,7 @@ const Home = () => {
                         </MediaControlCard>
                         <MediaControlCard>
                             <h2 className="card-title">מנהל/ת דיגיטל</h2>
-                            <div className="card-text">.בניית מענה דיגיטלי שיתמוך בניהול דיאלוג מדויק ומבוסס נתונים עם מגוון סוגי הלקוחות, לאורך כל מסע הלקוח</div>
+                            <div className="card-text">בניית מענה דיגיטלי שיתמוך בניהול דיאלוג מדויק ומבוסס נתונים עם מגוון סוגי הלקוחות, לאורך כל מסע הלקוח.</div>
                             <div className="job-details-wrap">
                                 <div className="job-details">מספר משרה: 301</div>
                                 <div className="job-details">מיקום המשרה: תל אביב</div>
@@ -174,7 +205,7 @@ const Home = () => {
 
             </div >
             <div className="contact">
-                <div><ContactForm/></div>
+                <div className="contact-wrapper" ><ContactForm /></div>
             </div>
         </div >
     )

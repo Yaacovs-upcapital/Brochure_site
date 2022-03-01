@@ -8,8 +8,9 @@ const ContactUs = () => {
       <div className="bg-img" style={{ zIndex: -1, textAlign: "center" }}>
 
       </div>
-
-      <div style={{ marginTop: -280 }} className="contact-page"><ContactForm /></div>
+      <div className='contact-page-wrapper'> 
+        <div style={{ marginTop: -220, marginBottom: 50 }} className="contact-page"><ContactForm /></div>
+      </div>
     </div>
   )
 }

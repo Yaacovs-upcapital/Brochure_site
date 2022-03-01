@@ -17,13 +17,14 @@
   color: #fff;
   background-size: cover;
   margin: 0;
-  text-align: justify;
   padding-top: 100px;
-  align-items: center;
 }
 
-.welcome-content {
+.welcome h1, .welcome div:nth-child(2){
   text-align: center;
+}
+.welcome-content {
+  text-align: justify;
   width: 60%;
   margin: auto;
 }
@@ -46,4 +47,28 @@
 .login-form{
     text-align: center;
     
+}
+
+@media (max-width:767px) {
+  .login-container{
+    flex-direction: column-reverse
+  }
+  .welcome{
+    width: 100%;
+    padding-top: 0px;
+  }
+
+  .login{
+    width: 100%;
+    padding: 30px 0;
+    
+  }
+
+  .login-card{
+    width: 60%;
+  }
+
+  .welcome h1{
+    margin-top: 60px;
+  }
 }

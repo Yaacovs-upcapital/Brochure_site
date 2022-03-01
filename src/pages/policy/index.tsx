@@ -90,7 +90,7 @@ const PrivacyPolicy = () => {
             </ul>
           </li>
         </ol>
-        <div>עודכן לאחרונה ביום: 11.10.2020</div>
+        <div className='last-update'>עודכן לאחרונה ביום: 11.10.2020</div>
 
       </div>
     </div>

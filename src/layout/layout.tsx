@@ -1,4 +1,4 @@
-import { Routes, Route, Link, BrowserRouter, useLocation } from "react-router-dom";
+import { Routes, Route, Link, BrowserRouter, useLocation, HashRouter } from "react-router-dom";
 import About from "../pages/aboutUs";
 import Blog from "../pages/blog";
 import Career from "../pages/career";
@@ -29,7 +29,7 @@ const Layout = () => {
 
 
     return (
-        <BrowserRouter  >
+        <HashRouter  >
             <Navbar />
             <ScrollToTop />
 
@@ -47,7 +47,7 @@ const Layout = () => {
                 <Route path="/app/" element={<ClientLogin />} />
             </Routes>
             <Footer />
-        </BrowserRouter>
+        </HashRouter>
     );
 };
 

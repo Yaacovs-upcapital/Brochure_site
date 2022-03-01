@@ -28,7 +28,7 @@
 .vl {
     padding-left: 40px;
     border-left: 1px solid;
-    color: #2f439a
+    color: #2f439a;
 }
 
 .detail-wrap {
@@ -79,4 +79,20 @@ input, textarea{
 
 ::placeholder{
     color: #2f439a;
+}
+
+@media (max-width:767px) {
+    .vl{
+        border-left: 0px ;
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .form-title {
+        font-size: 2em;
+    }
+
+    .second-title{
+        font-size: 1.1em;
+    }
 }

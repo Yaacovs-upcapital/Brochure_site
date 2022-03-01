@@ -1,3 +1,5 @@
+
+
 .details-wrap {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -30,6 +32,7 @@
 
 .job-desc-wrap {
   margin-bottom: 40px;
+  text-align: justify;
 }
 
 .desc-title,
@@ -58,6 +61,10 @@
   margin-right: auto;
   margin-left: auto;
   position: relative;
+}
+
+.job-qualification{
+text-align: justify;
 }
 
 .detail-input input,
@@ -106,4 +113,40 @@
   width: 30%;
   padding-right: 8px;
   font-weight: 400;
+}
+
+@media (max-width:768px) {
+  .bg-img{
+    margin-bottom: 50px;
+  }
+
+  .job-container, .job-form{
+    width: 70%;
+  }
+
+  .details-wrap{
+    display: block;
+  }
+
+  .details{
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+
+  .desc-title{
+    font-size: 1.5em;
+  }
+ .upload-title{
+   margin-top: 8px;
+    font-size: 0.8em;
+    width: 100%;
+  }
+
+  .detail-input input, .detail-input textarea,  .job-desc-wrap, .job-qualification{
+    font-size: 0.9em;
+  }
+  .upload{
+   display: block;
+  }
+
 }

@@ -2,6 +2,7 @@ import MediaControlCard from "../../components/card";
 import "./fintechNation.css";
 import { blogs } from "../../data/blog";
 import { useParams } from "react-router-dom";
+import useWindowSize from "../../components/windowSize";
 
 const FintechNation = () => {
   const blogId = useParams();
@@ -13,7 +14,7 @@ const FintechNation = () => {
   return (
     <div>
       <div className="bg-img">
-        <h2>{blogs[blogIndex].title}</h2>
+        <h2 className="single-aricle-title" style={{fontSize:useWindowSize()<=768?"1.3em":""}}>{blogs[blogIndex].title}</h2>
       </div>
       <div style={{ direction: "rtl", maxWidth: 1000, textAlign: "justify", margin: "auto", }}
       >

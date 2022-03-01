@@ -2,11 +2,9 @@ import "./jobOffer.css"
 import { jobOffers } from "../../data/jobOffer"
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import useWindowSize from "../../components/windowSize";
 
 const JobOffer = () => {
-
-        
-    
 
     const jobParams = useParams();
     console.log(">>>>>", jobParams.id);
@@ -16,7 +14,7 @@ const JobOffer = () => {
     return (
         <div style={{ direction: "rtl" }}>
             <div className="bg-img">
-                <h2>
+                <h2 className="single-aricle-title" style={{fontSize:useWindowSize()<=768?"1.3em":""}}>
                     {jobOffers[jobIndex].jobTitle}
                 </h2>
             </div>
@@ -33,7 +31,7 @@ const JobOffer = () => {
                         jobOffers[jobIndex].jobDesc.map((item, i) => (
                             <div key={i}>{item}</div>))}
                 </div>
-                <div>
+                <div className='job-qualification'>
                     <h3 className='desc-title'>דרישות התפקיד</h3>
                     <ul>
                         {
@@ -54,7 +52,7 @@ const JobOffer = () => {
                         <div className="detail-input"><input type="text" id="fname" name="fname" placeholder="שם מלא" required /></div>
                         <div className="detail-input"><input type="text" id="phone" name="phone" placeholder="טלפון" required /></div>
                         <div className="detail-input"><input type="email" id="email" name="email" placeholder='דוא"ל' required /></div>
-                        <div className="detail-input"><div className='upload' ><div className='upload-title'>העלאת קורות חיים</div><input type="file" id="myFile" name="filename" required /></div></div>
+                        <div className="detail-input"><div className='upload' ><div className='upload-title'>העלאת קורות חיים</div><input  type="file" id="myFile" name="filename" required /></div></div>
                         <div className="detail-input"><textarea name="textarea" id="" placeholder="הערות נוספות"></textarea></div>
                         <input type="submit" value={"שליחה"} />
                     </form>

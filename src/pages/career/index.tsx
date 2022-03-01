@@ -1,8 +1,11 @@
 import MediaControlCard from "../../components/card";
 import interview from "../../assets/images/interview.webp"
 import smiling from "../../assets/images/smiling.webp"
+import useWindowSize from "../../components/windowSize";
 
 const Career = () => {
+
+    const cardStyle = useWindowSize()<=767? {width:"100%", marginTop:"0px"}:{width:"30%", marginTop:"50px"};
     return (
         <div>
             <div className="bg-img" ><h1>.קריירה</h1></div>
@@ -16,11 +19,11 @@ const Career = () => {
                     </div >
                     <div className="text-container">
                         <div className="text-wrapper">
-                            <div className="career-second-title"><h3 style={{ margin: "0", lineHeight: "1" }}>.קריירה באפ קפיטל</h3></div>
-                            <div className="career-third-title"><p style={{ marginTop: "0", lineHeight: "1" }}> !מחפשת אותך Up Capital</p></div>
-                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}> .מביאה בשורה מהפכנית של חדשנות טכנולוגית שרותית ותפעולית לעולם האשראי החוץ בנקאי Up Capital</p></div>
-                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}>.ערכי החברה מושתתים על – אחדות המטרה, מקצוענות ומקצועיות, לימוד ושיפור תמידיים וחברות</p></div>
-                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}>.במידה ואתם מחפשים לגדול ולהתפתח, להיות חלק מחברה דינמית וחדשנית ומתחברים לערכי החברה – אתם מוזמנים לפנות אלינו</p></div>
+                            <div className="career-second-title"><h3 style={{ margin: "0", lineHeight: "1" }}>קריירה באפ קפיטל.</h3></div>
+                            <div className="career-third-title"><p style={{ marginTop: "0", lineHeight: "1" }}>Up Capital מחפשת אותך !</p></div>
+                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}> מביאה בשורה מהפכנית של חדשנות טכנולוגית שרותית ותפעולית לעולם האשראי החוץ בנקאי Up Capital.</p></div>
+                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}>ערכי החברה מושתתים על – אחדות המטרה, מקצוענות ומקצועיות, לימוד ושיפור תמידיים וחברות.</p></div>
+                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}>במידה ואתם מחפשים לגדול ולהתפתח, להיות חלק מחברה דינמית וחדשנית ומתחברים לערכי החברה – אתם מוזמנים לפנות אלינו.</p></div>
                         </div>
                         <div className="jobs-btn">
                         </div>
@@ -66,7 +69,7 @@ const Career = () => {
 
                     </div>
                 </div>
-                <div style={{width:"30%", marginTop:"50px"}}>
+                <div  style={cardStyle}>
                     <MediaControlCard path='/job-offer/:101/'>
                         <h2 className="card-title">נציגי/ות שירות ומכירות</h2>
                         <div className="card-text">לתפקיד הכולל מתן מענה טלפוני ללקוחות החברה בנושאים מגוונים בעולמות הפיננסיים ומכירת פתרונות פיננסיים.

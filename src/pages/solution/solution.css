@@ -1,60 +1,46 @@
 .bg-img {
-    background-image: url(../../assets/images/blue_dot.png);
-    height: 250px;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 100px;
+  background-image: url(../../assets/images/blue_dot.png);
+  height: 250px;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.bg-img h2 {
+  color: white;
+  font-size: 46px;
+}
+
+.bg-img h1 {
+  color: white;
+  font-size: 46px;
+}
+
+.solution-title{
 
 }
 
-.bg-img h2{
-    color: white;
-    font-size: 46px;
+.photos img {
+  width: 250px;
+  height: 500px;
+  object-fit: contain;
+  vertical-align: middle;
+  display: inline-block;
 }
 
-.bg-img h1{
-    color: white;
-    font-size: 46px;
+@media (max-width: 767px) {
+  .photos img {
+    width: 200px;
+    max-width: 200px;
+    height: 300px;
+    margin-right: 54px;
+
+  }
+
+  .bg-img h1, .bg-img h2{
+    font-size: 2em;
+  }
 }
-
-.photos img{
-    width: 250px;
-    height: 500px;
-    object-fit: contain;
-    vertical-align: middle;
-    display: inline-block;
-}
-
-/* .career-photos img {
-    border-radius: 50%;
-}
-
-.large-photo {
-    width: 450px;
-    max-width: 450px;
-    height: 450px;
-    object-fit: cover;
-    margin: auto;
-    display: block;
-}
-
-.small-photo {
-    width: 250px;
-    max-width: 250px;
-    height: 250px;
-    object-fit: cover;
-    position: absolute;
-    transform: translate(-225px, 131px);
-
-}
-
-.career-photos {
-    position: relative;
-    width: 55%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */

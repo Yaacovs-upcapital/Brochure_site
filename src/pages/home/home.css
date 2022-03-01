@@ -1,413 +1,663 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 .container {
-    max-width: 1200px;
-    margin: auto
-}
-.home-jumbotron, .our-solution, .contact{
-    height: 100vh;
-    background-size: cover;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.home-jumbotron{
-    background-image: url(../../assets/images/main-photo.jpg);
-}
-
-.contact{
-    background-image: url(../../assets/images/contact-bg.jpg);
-}
-
-.home-jumbotron, .contact {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.home-jumbotron-overlay {
-    width: 100%;
-    height: 100%;
-    background-image: url(../../assets/images/blue_dot.png);
-    opacity: 0.75;
-    filter: brightness(120%) contrast(150%) saturate(100%) blur(0px) hue-rotate(334deg);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.jumbotron-content {
-    z-index: 1;
-    text-align: center;
-    margin: -86px 0 0;
-
-}
-
-.jumbotron-content h1 {
-    color: #fff;
-    font-family: "Helvetica Hebrew", Sans-serif;
-    font-size: 46px;
-    font-weight: 400;
-    margin: 0;
-    line-height: 1;
-}
-
-.jumbotron-content h1:nth-child(2) {
-    font-weight: 700;
-
-}
-
-.jumbotron-content .logo-white {
-    width: 200px;
-    max-width: 200px;
-    height: 70px;
-}
-
-.arrow-link {
-    animation: bounce 4s infinite;
-    display: block;
-    position: absolute;
-    bottom: 100px;
-    left: calc(50% - 23px);
-}
-
-.arrow-icon {
-    width: 46px;
-    height: 46px;
-}
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(20px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
+.home-jumbotron
+{
+  height: 100vh;
+  background-size: cover;
 }
 
 .our-solution {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  height: auto;
+  background-size: cover;
+  padding: 50px 0;
 }
 
-.our-solution-title, .partners-title, .articles-title, .career-title, .career-second-title, .job-title, .job-details, .icon-title {
-    color: #2f439a;
+.home-jumbotron {
+  background-image: url(../../assets/images/main-photo.jpg);
 }
 
-.advantages-title{
-    color: white;
+.contact {
+  background-image: url(../../assets/images/contact-bg.jpg);
+  background-size: cover;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  height: auto;
 }
 
-.advantages-content {}
+.contact-wrapper{
+  padding-bottom: 20px
+}
+
+.home-jumbotron {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-jumbotron-overlay {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../assets/images/blue_dot.png);
+  opacity: 0.75;
+  filter: brightness(120%) contrast(150%) saturate(100%) blur(0px)
+    hue-rotate(334deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.jumbotron-content {
+  z-index: 1;
+  text-align: center;
+  margin: -86px 0 0;
+}
+
+.jumbotron-content h1 {
+  color: #fff;
+  font-family: "Helvetica Hebrew", Sans-serif;
+  font-size: 46px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.jumbotron-content h1:nth-child(2) {
+  font-weight: 700;
+}
+
+.jumbotron-content .logo-white {
+  width: 200px;
+  max-width: 200px;
+  height: 70px;
+}
+
+.arrow-link {
+  animation: bounce 4s infinite;
+  display: block;
+  position: absolute;
+  bottom: 100px;
+  left: calc(50% - 23px);
+}
+
+.arrow-icon {
+  width: 46px;
+  height: 46px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.our-solution {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.our-solution-title,
+.partners-title,
+.articles-title,
+.career-title,
+.career-second-title,
+.job-title,
+.job-details,
+.icon-title {
+  color: #2f439a;
+}
+
+.advantages-title {
+  color: white;
+}
 
 .partners-title {
-    font-family: "Helvetica Hebrew", Sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    text-align: center;
+  font-family: "Helvetica Hebrew", Sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
 }
 
-.our-solution-title, .advantages-title, .articles-title, .career-title{
-    font-family: "Helvetica Hebrew", Sans-serif;
-    font-size: 42px;
-    font-weight: 700;
-    text-align: center;
-
+.our-solution-title,
+.advantages-title,
+.articles-title,
+.career-title {
+  font-family: "Helvetica Hebrew", Sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .our-solution-content {
-    text-align: center;
-    z-index: 1;
-    width: auto;
-    max-width: auto;
-    align-content: center;
-    align-items: center;
+  text-align: center;
+  z-index: 1;
+  width: auto;
+  max-width: auto;
+  align-content: center;
+  align-items: center;
 }
-
 
 .our-solution-text {
-    color: #2f439a;
-    font-family: "Helvetica Hebrew", Sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.2em;
+  color: #2f439a;
+  font-family: "Helvetica Hebrew", Sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2em;
+  text-align: justify;
+  direction: rtl;
 }
 
-.chart, .clock, .smartphone {
-    width: 120px;
-    max-width: 120px;
-    height: 120px;
-    object-fit: contain;
-    vertical-align: middle;
+.chart,
+.clock,
+.smartphone {
+  width: 120px;
+  max-width: 120px;
+  height: 120px;
+  object-fit: contain;
+  vertical-align: middle;
 }
 
 .icons-row {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
 }
 
 .icon-wrap {
-    width: 33%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+  width: 33%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.icon-wrap a {
-    box-shadow: inset 1px 1px 2px rgb(255 255 255 / 20%), inset 3px 15px 45px rgb(255 255 255 / 10%), inset -1px -1px 2px rgb(0 0 0 / 50%), inset -3px -15px 45px rgb(0 0 0 / 10%);
-    border-radius: 999px;
-    display: block;
-    width: 120px;
-    height: 120px;
-    min-width: 120px;
-    max-width: 120px;
-    max-height: 120px;
-    min-height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+.icon-wrap .circle {
+  box-shadow: inset 1px 1px 2px rgb(255 255 255 / 20%),
+    inset 3px 15px 45px rgb(255 255 255 / 10%),
+    inset -1px -1px 2px rgb(0 0 0 / 50%), inset -3px -15px 45px rgb(0 0 0 / 10%);
+  border-radius: 75px;
+  width: 120px;
+  height: 120px;
 
-.icon-wrap a svg {
-    width: 70px;
-    max-width: 70px;
-    height: 70px;
-    object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-title-ad {
-    color: #fff;
+  color: #fff;
 }
 
-.icon-title, .icon-title-ad {
-    font-family: "Helvetica Hebrew", Sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    text-align: center;
+.icon-title,
+.icon-title-ad {
+  font-family: "Helvetica Hebrew", Sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .advantages {
-    background-image: url(../../assets/images/blue_dot.png);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-image: url(../../assets/images/blue_dot.png);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon-group {
-    background-color: #fff;
-    box-shadow: inset 1px 1px 2px rgb(255 255 255 / 20%), inset 3px 15px 45px rgb(255 255 255 / 10%), inset -1px -1px 2px rgb(0 0 0 / 50%), inset -3px -15px 45px rgb(0 0 0 / 10%);
-    border-radius: 999px;
-    height: 120px;
-    min-width: 120px;
-    max-width: 120px;
-    max-height: 120px;
-    min-height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #fff;
+  box-shadow: inset 1px 1px 2px rgb(255 255 255 / 20%),
+    inset 3px 15px 45px rgb(255 255 255 / 10%),
+    inset -1px -1px 2px rgb(0 0 0 / 50%), inset -3px -15px 45px rgb(0 0 0 / 10%);
+  border-radius: 75px;
+  height: 120px;
+  min-width: 120px;
+  max-width: 120px;
+  max-height: 120px;
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.aaa {
-    width: 25%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 50px;
+.advantage-item {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
 }
-
 
 .icon-square {
-    display: flex;
-    justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding-left: 100px;
 }
 
 .icon-in {
-    width: 75px;
-    height: 75px;
-    padding: 6px !important;
-    object-fit: fill;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    box-shadow: none;
+  width: 75px;
+  height: 75px;
+  padding: 6px !important;
+  object-fit: fill;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: none;
 }
 
-
 .image {
-    padding-bottom: 42%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  padding-bottom: 42%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .images-row {
-    display: grid;
-    grid-gap: 15px;
-    grid-template-columns: repeat(8, 1fr);
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(8, 1fr);
 }
 
 .partners {
-    box-sizing: border-box;
-    max-width: 1000px;
-    margin: auto;
-    padding: 0 20px 20px;
-    ;
-    padding-top: 40px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px 40px 20px;
 }
 
 .articles {
-    margin: auto;
+  margin: auto;
 }
 
-.card-title, .card-text {
-    text-align: right;
-    font-family: "Helvetica Hebrew", Sans-serif;
-    line-height: 1.3em;
-
+.card-title,
+.card-text {
+  text-align: justify;
+  font-family: "Helvetica Hebrew", Sans-serif;
+  line-height: 1.3em;
 }
 
 .card-title {
-    margin-top: 0;
-    color: #2f439a;
-
+  margin-top: 0;
+  color: #2f439a;
 }
 
 .card-text {
-    font-size: 18px;
-    color: #2f439a;
-
+  font-size: 16px;
+  color: #2f439a;
 }
 
 .articles-row .article-card {
-    max-width: 30%;
+  max-width: 30%;
 }
 
 .articles-row .card-title {
-    font-size: 24px;
-
+  font-size: 20px;
 }
 
 .articles-row {
-    margin: 40px auto 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-.articles-row, .articles {
-    /* max-width: 1330px; */
-
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .article-btn {
-    margin: 40px;
-    text-align: center;
+  margin: 40px;
+  text-align: center;
 }
 
 .career-second-title {
-    font-family: "Helvetica Hebrew", Sans-serif;
-    font-size: 26px;
-    font-weight: 700;
-    margin: 0;
-    line-height: 1;
+  font-family: "Helvetica Hebrew", Sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
 }
 
 .career-third-title {
-    font-family: "Helvetica Hebrew", Sans-serif;
-    font-size: 26px;
-    font-weight: 400;
-    color: #2f439a;
-    margin: 0;
-    line-height: 1;
+  font-family: "Helvetica Hebrew", Sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: #2f439a;
+  margin: 0;
+  line-height: 1;
 }
 
 .career-text {
-    margin: 0;
-    color: #2f439a;
-    font-family: "Helvetica Hebrew", Sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.3em;
+  margin: 0;
+  color: #2f439a;
+  font-family: "Helvetica Hebrew", Sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3em;
 }
 
 .career-content {
-    display: flex;
-    max-width: 1370px;
-    box-sizing: border-box;
-    margin: auto;
-    padding: 0 15px 20px;
-    ;
+  display: flex;
+  max-width: 1370px;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0 15px 20px;
 }
 
 .career-photos img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .large-photo {
-    width: 450px;
-    max-width: 450px;
-    height: 450px;
-    object-fit: cover;
-    margin: auto;
-    display: block;
+  width: 450px;
+  max-width: 450px;
+  height: 450px;
+  object-fit: cover;
+  margin: auto;
+  display: block;
 }
 
 .small-photo {
-    width: 250px;
-    max-width: 250px;
-    height: 250px;
-    object-fit: cover;
-    position: absolute;
-    transform: translate(-225px, 131px);
-
+  width: 250px;
+  max-width: 250px;
+  height: 250px;
+  object-fit: cover;
+  position: absolute;
+  transform: translate(-225px, 131px);
 }
 
 .career-photos {
-    position: relative;
-    width: 55%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-container {
-    width: 45%;
-    padding: 0 0 0 50px;
-
+  width: 45%;
+  padding: 0 0 0 50px;
+  text-align: justify;
+  direction: rtl;
 }
 
 .career-container {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 .jobs-btn {
-    margin: 0;
-    text-align: right;
+  margin: 0;
+  text-align: right;
 }
 
 .job-title {
-    font-size: 28px;
-    font-weight: 700;
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .job-details {
-    font-size: 15px;
-    font-weight: 700
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .job-details-wrap {
-    margin-top: 15px;
+  margin-top: 15px;
+}
+
+.carousel-wrapper {
+  width: 100%;
+}
+
+.image-carousel {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  width: 100px;
+  height: 30px;
+  margin: auto;
+}
+
+.crousel-item-dv {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 20px;
+}
+
+.partners .carousel-wrapper {
+  text-align: center;
+}
+
+.articles-btn{
+  color: #fff;
+  border-color: #2f439a;
+  border-width: 1px !important;
+  border-style: solid;
+  border-radius: 5px;
+  margin: 0 0 0 30px !important;
+  text-shadow: 0px 0px 0px #00000000;
+  padding: 10px 15px;
+  position: relative;
+  background: #2f439a;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  line-height: 22px;
+}
+
+.contact-wrapper{
+  width: 900px;
+  margin: auto;
 }
 
 
+/* responsive */
 
-@media (min-width:767px){
+@media (max-width: 767px) {
+  .jumbotron-content h1 {
+    font-size: 2em;
+  }
 
+  .icon-in{
+    height: 60px;
+    width: 60px;
+  }
+
+  .icons-row .solution-icon {
+    width: 40%;
+    height: 40%;
+    margin: auto;
+  }
+
+  .icon-wrap .circle {
+    width: 75px;
+    height: 75px;
+  }
+
+  .icons-row {
+    margin: 20px;
+  }
+
+  .our-solution-title,
+  .career-title, .advantages-title, .articles-title {
+    font-size: 2em;
+  }
+
+  .our-solution-text {
+    font-size: 1em;
+    max-width: 60%;
+    margin: auto;
+  }
+
+  .our-solution .icon-title {
+    font-size: 0.8em;
+  }
+  .articles-row,
+  .career-content {
+    flex-direction: column;
+  }
+  .articles-row .article-card {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .text-container {
+    width: auto;
+    padding: 0;
+  }
+
+  .card-text,
+  .card-title,
+  .job-details-wrap {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .small-photo {
+    max-height: 28vh;
+    max-width: 100%;
+  }
+
+  .large-photo {
+    max-height: 56vh;
+  }
+
+  .small-photo {
+    transform: translate(0px, 25px);
+    height: 120px;
+    width: 120px;
+  }
+
+  .large-photo {
+    transform: translate(100px, -59px);
+    height: 250px;
+    width: 250px;
+  }
+  .career-photos {
+    margin-top: 40px;
+  }
+
+  .job-title {
+    margin-right: 58px;
+    font-size: 1.6em;
+  }
+
+  .career-container {
+    padding-top: 0;
+  }
+
+  .advantages-content {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .advantage-item {
+    width: auto;
+    margin: 0;
+  }
+
+  .career-text,
+  .jobs-btn {
+    font-size: 0.9em;
+    max-width: 75%;
+    margin: auto;
+  }
+
+  .career-content {
+    font-size: 1.2em;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .career-second-title,
+  .career-third-title {
+    font-size: 1.1em;
+    margin-right: 42px;
+    width: 100%;
+  }
+
+  .icon-group{
+    height: 90px;
+    width: 90px;
+    min-height: 90px;
+    min-width: 90px;
+  }
+
+  .icon-title-ad{
+    font-size: 0.9em;
+  }
+
+  .articles .card-title:nth-child(1){
+    font-size: 1.3em;
+  }
+  .articles .card-text:nth-child(1){
+    width:100%;
+  }
+
+  .career-title{
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .contact-wrapper{
+    width:auto;
+  }
+}
+
+
+@media screen and (max-width: 1060px) {
+  #primary {
+    width: 67%;
+  }
+
+  #secondary {
+    width: 30%;
+    margin-left: 3%;
+  }
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+  #primary {
+    width: 100%;
+  }
+
+  #secondary {
+    width: 100%;
+    margin: 0;
+    border: none;
+  }
+}
+
+@media (min-device-width: 600px) {
+  img[data-src-600px] {
+    content: attr(data-src-600px, url);
+  }
+}
+
+@media (min-device-width: 800px) {
+  img[data-src-800px] {
+    content: attr(data-src-800px, url);
+  }
 }

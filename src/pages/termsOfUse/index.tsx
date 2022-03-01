@@ -7,7 +7,7 @@ const TermOfUse = () => {
                 <h2>תנאי שימוש</h2>
             </div>
 
-            <div className='terms-container'>
+            <div className="terms-container container">
                 <ol>
                     <li>
                         <strong><p className='p-title'>כללי</p></strong>
@@ -60,7 +60,7 @@ const TermOfUse = () => {
                         </ul>
                     </li>
                 </ol>
-                <div>עודכן לאחרונה ביום: 11.10.2020</div>
+                <div className='last-update'>עודכן לאחרונה ביום: 11.10.2020</div>
             </div>
 
         </div>
