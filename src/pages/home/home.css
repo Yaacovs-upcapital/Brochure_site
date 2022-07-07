@@ -135,7 +135,7 @@
 .partners-title {
   font-family: "Helvetica Hebrew", Sans-serif;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -240,11 +240,11 @@
 }
 
 .advantage-item {
-  width: 25%;
+  width: 50%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 50px;
+  margin: auto;
 }
 
 .icon-square {
@@ -253,7 +253,8 @@
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  padding-left: 100px;
+  width: 75rem;
+  margin: auto;
 }
 
 .icon-in {
@@ -387,13 +388,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1.5rem;
 }
 
 .text-container {
   width: 45%;
   padding: 0 0 0 50px;
   text-align: justify;
-  direction: rtl;
 }
 
 .career-container {
@@ -402,7 +403,7 @@
 
 .jobs-btn {
   margin: 0;
-  text-align: right;
+  /* text-align: right; */
 }
 
 .job-title {
@@ -468,7 +469,9 @@
   margin: auto;
 }
 
-
+.dot{
+  color: red;
+  }
 /* responsive */
 
 @media (max-width: 767px) {
@@ -552,9 +555,7 @@
     height: 250px;
     width: 250px;
   }
-  .career-photos {
-    margin-top: 40px;
-  }
+  
 
   .job-title {
     margin-right: 58px;

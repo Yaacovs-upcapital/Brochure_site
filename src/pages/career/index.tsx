@@ -2,21 +2,19 @@ import MediaControlCard from "../../components/card";
 import interview from "../../assets/images/interview.webp"
 import smiling from "../../assets/images/smiling.webp"
 import useWindowSize from "../../components/windowSize";
+import { t } from "i18next";
 
 const Career = () => {
 
     const cardStyle = useWindowSize()<=767? {width:"100%", marginTop:"0px"}:{width:"30%", marginTop:"50px"};
     return (
         <div>
-            <div className="bg-img" ><h1>.קריירה</h1></div>
+            <div className="bg-img" ><h1>{t("career")}</h1><h1 style={{color:"red"}}>.</h1></div>
             <div className="career-container container" >
 
                 
                 <div className="career-content">
-                    <div className="career-photos">
-                        <img className="large-photo" src={interview} />
-                        <img className="small-photo" src={smiling} />
-                    </div >
+                    
                     <div className="text-container">
                         <div className="text-wrapper">
                             <div className="career-second-title"><h3 style={{ margin: "0", lineHeight: "1" }}>קריירה באפ קפיטל.</h3></div>
@@ -28,11 +26,15 @@ const Career = () => {
                         <div className="jobs-btn">
                         </div>
                     </div>
+                    <div className="career-photos">
+                        <img className="large-photo" src={interview} />
+                        <img className="small-photo" src={smiling} />
+                    </div >
                 </div>
-                <div style={{direction:"rtl"}}> 
+                <div > 
                 <div className="job-offers container" >
                     <div className="job-title-wrap">
-                        <h3 className="job-title">משרות אחרונות.</h3>
+                        <h3 className="job-title">{t('latest_jobs')}.</h3>
                     </div>
                     <div className="articles-row">
                         <MediaControlCard path = "/job-offer/:102/">

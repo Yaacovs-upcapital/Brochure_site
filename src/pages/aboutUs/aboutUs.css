@@ -1,9 +1,15 @@
-.member-title,
+
 .team-title {
   font-size: 1.4rem;
   text-align: center;
 }
 
+.member-title {
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 0 30px;
+
+}
 .member-title,
 .member-description,
 .team-title {
@@ -11,7 +17,6 @@
 }
 
 .member-description {
-  max-width: 1000;
   text-align: justify;
   padding: 0 30px;
 }

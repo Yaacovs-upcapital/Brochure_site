@@ -2,14 +2,16 @@ import MediaControlCard from "../../components/card"
 import workingteam from "../../assets/images/working-team.jpg";
 
 import "./blog.css"
+import { useTranslation } from "react-i18next";
 
 const Blog = () => {
 
+    const { t } = useTranslation();
 
     return (
         <div className="blog-container">
             <div className="bg-img">
-                <h1>מאמרים</h1>
+                <h1>{t('blog')}</h1><h1 style={{color:"red"}}>.</h1>
             </div>
 
             <div className="articles container">

@@ -12,8 +12,7 @@ import JobOffer from "../pages/jobOffer";
 import TermOfUse from "../pages/termsOfUse";
 import PrivacyPolicy from "../pages/policy";
 import ClientLogin from "../pages/clientLogin";
-import { useEffect, useState } from "react";
-
+import { useEffect } from "react";
 export function ScrollToTop() {
     const { pathname } = useLocation();
 
@@ -24,13 +23,11 @@ export function ScrollToTop() {
     return null;
 }
 
-const Layout = () => {
-
-
-
+const Layout = (props) => {
+    // props.getlang("h")
     return (
         <HashRouter  >
-            <Navbar />
+            <Navbar navLang={props} />
             <ScrollToTop />
 
             <Routes >

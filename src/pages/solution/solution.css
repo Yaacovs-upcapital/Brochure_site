@@ -19,8 +19,8 @@
   font-size: 46px;
 }
 
-.solution-title{
-
+.solution-title {
+  display: "flex";
 }
 
 .photos img {
@@ -37,10 +37,10 @@
     max-width: 200px;
     height: 300px;
     margin-right: 54px;
-
   }
 
-  .bg-img h1, .bg-img h2{
+  .bg-img h1,
+  .bg-img h2 {
     font-size: 2em;
   }
 }

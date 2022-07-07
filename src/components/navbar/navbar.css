@@ -1,6 +1,5 @@
 .navbar ul {
   display: flex;
-  direction: rtl;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -44,7 +43,7 @@
 
 .navbar-wrap {
   display: flex;
-  max-width: 1200px;
+  max-width: 1300px;
   justify-content: space-between;
   align-items: center;
   min-height: 100px;
@@ -55,7 +54,8 @@
   background: #fff;
 }
 
-.navbar.light .link {
+.navbar.light .link,
+.navbar.light .lang {
   color: #2f439a;
 }
 
@@ -69,6 +69,5 @@
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
-
   }
 }

@@ -1,0 +1,8 @@
+.en{
+    direction: ltr !important;
+}
+
+.noEn{
+    direction: rtl !important;
+}
+

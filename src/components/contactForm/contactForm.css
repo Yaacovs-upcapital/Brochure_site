@@ -27,7 +27,6 @@
 
 .vl {
     padding-left: 40px;
-    border-left: 1px solid;
     color: #2f439a;
 }
 
@@ -79,6 +78,7 @@ input, textarea{
 
 ::placeholder{
     color: #2f439a;
+    opacity:0.5
 }
 
 @media (max-width:767px) {

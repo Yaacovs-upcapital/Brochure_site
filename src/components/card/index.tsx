@@ -7,10 +7,11 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { Link } from "react-router-dom";
 import "./card.css";
 import useWindowSize from "../windowSize";
+import { useTranslation } from "react-i18next";
 
 
 export default function MediaControlCard(props: any) {
-
+const {t}=useTranslation()
 
   return (
     <Card
@@ -32,7 +33,7 @@ export default function MediaControlCard(props: any) {
         <CardContent>{props.children}</CardContent>
         <div style={{ marginRight: 30 }}>
           <Link to={props.path || "/"} className="link-btn">
-            קרא עוד
+            {t("read_more")}
             <ChevronLeftIcon />
           </Link>
         </div>

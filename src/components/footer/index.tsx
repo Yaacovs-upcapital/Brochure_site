@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import { LogoWhite } from '../../assets/icons'
 import credibilityMark from '../../assets/images/credibility-mark.png'
@@ -5,6 +6,7 @@ import credibilityMark from '../../assets/images/credibility-mark.png'
 import './footer.css'
 
 const Footer = () => {
+    const {t}=useTranslation()
     return (
         <div className="footer">
             <div className='footer-wrap'>
@@ -15,9 +17,9 @@ const Footer = () => {
                 </div>
                 <div className='footer-sec' >
                     <ul>
-                        <li><NavLink to={"/terms-of-use"} className="link"  >תנאי שימוש</NavLink></li>
-                        <li><NavLink to={"/privacy-policy/"} className="link">מדיניות</NavLink></li>
-                        <li><NavLink to={"/contact-us/"} className="link">צור קשר</NavLink></li>
+                        <li><NavLink to={"/terms-of-use"} className="link"  >{t("terms")}</NavLink></li>
+                        <li><NavLink to={"/privacy-policy/"} className="link">{t('policy')}</NavLink></li>
+                        <li><NavLink to={"/contact-us/"} className="link">{t('contact')}</NavLink></li>
                     </ul>
                 </div>
         

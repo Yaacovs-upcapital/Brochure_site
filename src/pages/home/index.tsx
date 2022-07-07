@@ -14,42 +14,34 @@ import interview from "../../assets/images/interview.webp"
 import smiling from "../../assets/images/smiling.webp"
 import { Button } from "@mui/material";
 import ChevronLeft from "@mui/icons-material/ChevronLeft";
+import ChevronRight from "@mui/icons-material/ChevronRight";
 import ContactForm from "../../components/contactForm";
-import Carousel from "react-elastic-carousel";
 import useWindowSize from "../../components/windowSize";
 import { useRef } from "react";
 import Slider from 'infinite-react-carousel';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { NoEncryption } from "@mui/icons-material";
 import { NavLink } from "react-router-dom";
-
-const partners = [Obelisk, Oracle,   PrimeSec, Erech, BDO, Deloitte, Tadmor, PWC]
+import { FormattedMessage, } from 'react-intl';
+import { useTranslation } from "react-i18next";
+import "../../translations/i18n";
+import { i18n } from "../../translations/i18n";
+// import { t } from "i18next";
+const partners = [Obelisk, Oracle, PrimeSec, Erech, BDO, Deloitte, Tadmor, PWC]
 const careerPath = "../career"
 
-const carouselItems = [
-    <div className="advantage-item"><div className="icon-group"><CashFlow className="icon-in" /></div><span className="icon-title-ad">חיזוק התזרים</span></div>,
-    <div className="advantage-item"><div className="icon-group"><SaveMoney className="icon-in" /></div><span className="icon-title-ad">הורדת עלויות ביטוח אשראי</span></div>,
-    <div className="advantage-item"> <div className="icon-group"><Refresh className="icon-in" /></div><span className="icon-title-ad">ייעול תהליכים והקטנת עומסים</span></div>,
-    <div className="advantage-item"><div className="icon-group"><OneFingerClick className="icon-in" /></div><span className="icon-title-ad">קבלת מימון בלחיצה אחת</span></div>,
-    <div className="advantage-item"><div className="icon-group"><Corona className="icon-in" /></div><span className="icon-title-ad">הקטנת הסיכונים בעקבות הקורונה</span></div>,
-    <div className="advantage-item"><div className="icon-group"><Handshake className="icon-in" /></div><span className="icon-title-ad">חיזוק הקשר בין הצדדים</span></div>,
-    <div className="advantage-item"><div className="icon-group"><Lock className="icon-in" /></div><span className="icon-title-ad">ביטחון תזרימי</span></div>,
-    <div className="advantage-item"><div className="icon-group"><Competition className="icon-in" /></div><span className="icon-title-ad">חיזוק התזרים</span></div>,
-]
 
 
-const Home = () => {
-
-
+const Home = (props) => {
+    const { t } = useTranslation();
+    const lang= i18n.language
     const settings = {
-       autoplay: true,
-       autoplaySpeed: 5000,
+        autoplay: true,
+        autoplaySpeed: 5000,
         slidesPerRow: 2,
         dots: true,
         prevArrow: <div style={{ margin: "0", position: "absolute" }}><ArrowBackIosNewIcon style={{ color: "#fff" }} /></div>,
         nextArrow: <div style={{ margin: "0", position: "absolute" }}><ArrowForwardIosIcon style={{ color: "#fff" }} /></div>,
-   
     };
 
     const settings1 = {
@@ -57,11 +49,18 @@ const Home = () => {
         autoplaySpeed: 5000,
         slidesPerRow: 4,
         dots: true,
-        arrows: false, 
+        arrows: false,
     };
-
-    
-
+    const carouselItems = [
+        <div className="advantage-item"><div className="icon-group"><CashFlow className="icon-in" /></div><span className="icon-title-ad">{t("cash")}</span></div>,
+        <div className="advantage-item"><div className="icon-group"><SaveMoney className="icon-in" /></div><span className="icon-title-ad">{t("reduce")}</span></div>,
+        <div className="advantage-item"> <div className="icon-group"><Refresh className="icon-in" /></div><span className="icon-title-ad">{t("streamline")}</span></div>,
+        <div className="advantage-item"><div className="icon-group"><OneFingerClick className="icon-in" /></div><span className="icon-title-ad">{t("onclick")}</span></div>,
+        <div className="advantage-item"><div className="icon-group"><Corona className="icon-in" /></div><span className="icon-title-ad">{t("corona")}</span></div>,
+        <div className="advantage-item"><div className="icon-group"><Handshake className="icon-in" /></div><span className="icon-title-ad">{t("relationship")}</span></div>,
+        <div className="advantage-item"><div className="icon-group"><Lock className="icon-in" /></div><span className="icon-title-ad">{t("cash_secure")}</span></div>,
+        <div className="advantage-item"><div className="icon-group"><Competition className="icon-in" /></div><span className="icon-title-ad">{t("competitive")}</span></div>,
+    ]
 
     return (
         <div className="page-container">
@@ -73,8 +72,8 @@ const Home = () => {
                         <LogoWhite className="logo-white" />
                     </div>
                     <div>
-                        <h1>עולם חדש של תנאי תשלום</h1>
-                        <h1> לטובת כל הצדדים</h1>
+                        <h1>{t("homeHeader_1")}</h1>
+                        <h1>{t("homeHeader_2")}</h1>
                     </div>
                     <div className="arrow-link" >
                         <Arrow className="arrow-icon" />
@@ -85,19 +84,19 @@ const Home = () => {
             <div className="our-solution" >
                 <div className="container">
                     <div className="our-solution-content">
-                        <h2 className="our-solution-title">.הפתרון שלנו</h2>
-                        <p className="our-solution-text" >פתרון בעיית תזרים מזומנים לעסקים (שוטף פלוס) באמצעות שיטה ייחודית וטכנולוגיה מתקדמת היוצרת דרכי מימון חדשות בשוק</p>
+                        <h2 className="our-solution-title">{t('our_solution')}</h2>
+                        <p className="our-solution-text" >{t("our_solution_text")}</p>
                     </div>
                     <div className="icons-row">
-                        <div className="icon-wrap"><div  className="circle"><Chart className="solution-icon" /></div> <span className="icon-title">כולם מרוויחים</span></div>
-                        <div className="icon-wrap"><div   className="circle"><Clock className="solution-icon" /></div><span className="icon-title">מנוהל באופן מלא</span></div>
-                        <div className="icon-wrap"><div  className="circle"><Smartphone className="solution-icon" /></div><span className="icon-title">דיגיטלי בקליק אחד</span></div>
+                        <div className="icon-wrap"><div className="circle"><Chart className="solution-icon" /></div> <span className="icon-title">{t("win_win")}</span></div>
+                        <div className="icon-wrap"><div className="circle"><Clock className="solution-icon" /></div><span className="icon-title">{t("supply_chain")}</span></div>
+                        <div className="icon-wrap"><div className="circle"><Smartphone className="solution-icon" /></div><span className="icon-title">{t("digital")}</span></div>
                     </div>
                 </div>
             </div>
             <div className="advantages">
                 <div className="advantages-content">
-                    <h2 className="advantages-title">.היתרונות שלנו</h2>
+                    <h2 className="advantages-title">{t("benefits")}</h2>
                     {useWindowSize() <= 767 ?
                         <div className="carousel-wrapper">
                             <Slider {...settings}>
@@ -111,11 +110,11 @@ const Home = () => {
             </div>
 
             <div className="partners container" >
-                <h2 className="partners-title">.השותפים לדרך</h2>
+                <h2 className="partners-title">{t("partners")}</h2>
                 {useWindowSize() <= 767 ?
                     <div className="carousel-wrapper">
                         <Slider {...settings1}>
-                            {partners.map(item => (<div className="carousel-item-dv" ><img  className="image-carousel" src={`${item}`}/></div>))}
+                            {partners.map(item => (<div className="carousel-item-dv" ><img className="image-carousel" src={`${item}`} /></div>))}
 
                         </Slider>
                     </div>
@@ -125,11 +124,10 @@ const Home = () => {
                     </div>}
             </div>
 
-
             <div className="articles container">
-                <h2 className="articles-title">.מאמרים</h2>
+                <h2 className="articles-title">{t("blog")}</h2>
                 <MediaControlCard image={workingteam} path="/blog/:אומת+הפינטק/">
-                    <h2 className="card-title" >אומת הפינטק: הזווית הישראלית של הטכנולוגיה הפיננסית</h2>
+                    <h2 className="card-title" >{t("fintech_nation")}</h2>
                     <div className="card-text">
                         באומת הסטארטפ היתה זו רק שאלה של זמן עד שהטכנולוגיה תפרוץ גם אל תוך העולם הפיננסי המסורתי. בשנים האחרונות תחום הפינטק נחשב לאחד התחומים המתפתחים ביותר ושירותים רבים של מוצרים פיננסיים בשלל תחומים כדוגמת סליקה, אמצעי תשלום, ניהול השקעות ואשראי עוברים טרנספורמציה בחסות הטכנולוגי</div>
                 </MediaControlCard>
@@ -140,33 +138,34 @@ const Home = () => {
                 <MediaControlCard path="/blog/:רוורס+פקטורינג/"><h2 className="card-title">דווקא עכשיו רוורס פקטורינג</h2><div className="card-text">בשעה שעומדים בפני התקשרות מול גופים גדולים, הספקים נדרשים לקחת בחשבון מראש פרמטרים רבים כדוגמת: העלות המימונית שלו.</div></MediaControlCard>
             </div>
             <div className="article-btn">
-                <NavLink  to="./blog/" className="articles-btn"><ChevronLeft />מאמרים נוספים </NavLink>
+                <NavLink to="./blog/" className="articles-btn"><ChevronLeft />מאמרים נוספים </NavLink>
             </div>
 
             <div className="career-container container">
 
-                <div className="career-title"><h3>.קריירה</h3></div>
+                <div className="career-title"><h3>.{t("career")}</h3></div>
                 <div className="career-content">
+                   
+                    <div className="text-container">
+                        <div className="text-wrapper">
+                            <div className="career-second-title"><h3 style={{ margin: "0", lineHeight: "1" }}>{t("career_up")}.</h3></div>
+                            <div className="career-third-title"><p style={{ marginTop: "0", lineHeight: "1" }}>{t("hiring")}!</p></div>
+                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}>{t("goal")}.</p></div>
+                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}>{t("values")}.</p></div>
+                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1", display:lang=="en"?"none":"" }}>{t("apply")}</p></div>
+                        </div>
+                        <div className="jobs-btn">
+                            <Button variant="contained" href={careerPath} style={{ backgroundColor: "#2f439a", padding: "7px 20px", fontFamily: '"Helvetica Hebrew",Sans-serif', fontSize: "20px", fontWeight: "700", width: "auto" }}>{t("applications")}{lang=="en"?<ChevronRight/>:<ChevronLeft />}</Button>
+                        </div>
+                    </div>
                     <div className="career-photos">
                         <img className="large-photo" src={interview} />
                         <img className="small-photo" src={smiling} />
                     </div >
-                    <div className="text-container">
-                        <div className="text-wrapper">
-                            <div className="career-second-title"><h3 style={{ margin: "0", lineHeight: "1" }}>קריירה באפ קפיטל.</h3></div>
-                            <div className="career-third-title"><p style={{ marginTop: "0", lineHeight: "1" }}>Up Capital מחפשת אותך !</p></div>
-                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}>Up Capital מביאה בשורה מהפכנית של חדשנות טכנולוגית שרותית ותפעולית לעולם האשראי החוץ בנקאי .</p></div>
-                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}>ערכי החברה מושתתים על – אחדות המטרה, מקצוענות ומקצועיות, לימוד ושיפור תמידיים וחברות.</p></div>
-                            <div className="career-text"><p style={{ marginTop: "0", lineHeight: "1" }}>במידה ואתם מחפשים לגדול ולהתפתח, להיות חלק מחברה דינמית וחדשנית ומתחברים לערכי החברה – אתם מוזמנים לפנות אלינו.</p></div>
-                        </div>
-                        <div className="jobs-btn">
-                            <Button variant="contained" href={careerPath} style={{ backgroundColor: "#2f439a", padding: "7px 20px", fontFamily: '"Helvetica Hebrew",Sans-serif', fontSize: "20px", fontWeight: "700", width: "auto" }}>משרות נוספות<ChevronLeft /></Button>
-                        </div>
-                    </div>
                 </div>
                 <div className="job-offers container">
                     <div className="job-title-wrap">
-                        <h3 className="job-title">.משרות אחרונות</h3>
+                        <h3 className="job-title">{t("latest_jobs")}.</h3>
                     </div>
                     <div className="articles-row">
                         <MediaControlCard>
