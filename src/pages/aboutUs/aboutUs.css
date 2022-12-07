@@ -23,6 +23,7 @@
 
 .team-container {
   display: flex;
+  justify-content: space-evenly;
   direction: rtl;
 }
 
@@ -36,8 +37,14 @@
 
 .img-wrap {
   text-align: center;
+  position: relative;
 }
 
+.plus-img{
+  position: absolute;
+  top: 7rem;
+  right: 4.5rem;
+}
 @media (max-width: 767px) {
   .team-container {
     flex-direction: column;
@@ -67,3 +74,36 @@
 
   }
 }
+
+@media screen and (min-width:991px){
+  .about-up{
+    background-image: url("../../assets/images/about-up.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1100px;
+  
+  }
+}
+
+@media screen and (max-width:991px){
+  .about-up{
+    background-image: url("../../assets/images/about-up.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1900px;
+  
+  }
+}
+
+@media screen and (max-width:700px){
+  .about-up{
+    background-image: url("../../assets/images/about-up.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 2400px;
+  
+  }
+}
+
+
+

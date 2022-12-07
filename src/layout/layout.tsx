@@ -1,8 +1,5 @@
 import { Routes, Route, Link, BrowserRouter, useLocation, HashRouter } from "react-router-dom";
-import About from "../pages/aboutUs";
-import Blog from "../pages/blog";
-import Career from "../pages/career";
-import ContactUs from "../pages/contactUs";
+
 import FintechNation from "../pages/fintechNation";
 import Home from "../pages/home";
 import Solution from "../pages/solution";
@@ -13,6 +10,8 @@ import TermOfUse from "../pages/termsOfUse";
 import PrivacyPolicy from "../pages/policy";
 import ClientLogin from "../pages/clientLogin";
 import { useEffect } from "react";
+import About from "../pages/aboutUs";
+import Blog from "../pages/blog";
 export function ScrollToTop() {
     const { pathname } = useLocation();
 
@@ -35,8 +34,8 @@ const Layout = (props) => {
                 <Route path="/our-solution/" element={<Solution />} />
                 <Route path="/about-us/" element={<About />} />
                 <Route path="/blog/" element={<Blog />} />
-                <Route path="/career/" element={<Career />} />
-                <Route path="/contact-us/" element={<ContactUs />} />
+                {/* <Route path="/career/" element={<Career />} />
+                <Route path="/contact-us/" element={<ContactUs />} /> */}
                 <Route path="/blog/:id/" element={<FintechNation />} />
                 <Route path="/job-offer/:id/" element={<JobOffer />} />
                 <Route path="/terms-of-use/" element={<TermOfUse />} />

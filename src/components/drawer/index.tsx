@@ -6,13 +6,17 @@ import { useEffect, useState } from "react";
 import './drawer.css';
 import "../navbar/navbar.css";
 import { NavLink } from "react-router-dom";
+import { i18n } from "../../translations/i18n";
+import { useTranslation } from "react-i18next";
 
 // type Anchor = "top" | "left" | "bottom" | "right";
 
 const TempDrawer = () => {
+  const { t } = useTranslation();
+  const lang= i18n.language
   const [scrolled, setScrolled] = useState(false);
   const onScroll = () => setScrolled(window.scrollY > 60);
-
+  
   useEffect(() => {
     // clean up code
     // window.removeEventListener('scroll', onScroll);
@@ -51,8 +55,7 @@ const TempDrawer = () => {
         ))}
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", width: "50%", margin: "auto" }}>
-          <div > <NavLink to={"/app/"} className="link-button">קניינים</NavLink></div>
-          <div> <NavLink to={"/app/"} className="link-button">ספקים</NavLink></div>
+          <div> <NavLink to={"/app/"} className="link-button">{t('vendors_login')}</NavLink></div>
         </div>
       </div>
     </div>

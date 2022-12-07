@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/font-awesome/css/font-awesome.min.css";
+import About from './pages/aboutUs';
+import Solution from './pages/solution';
+import Blog from './pages/blog';
+import Navbar from './components/navbar';
 
 ReactDOM.render(
 
   <React.StrictMode>
       <App />
+      {/* <About/> */}
+      {/* <Solution/> */}
+      {/* <Blog/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

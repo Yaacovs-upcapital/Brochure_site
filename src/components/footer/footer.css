@@ -1,75 +1,103 @@
-.footer ul {
-  display: flex;
-  direction: rtl;
-  list-style-type: none;
-  margin: 0;
-  max-width: 500px;
-  justify-content: space-between;
+.form-title,
+.second-title {
+  color: white;
 }
 
-.footer .link {
-  font-size: 16px;
-  font-weight: 480;
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer {
-  text-align: center;
-  width: 100%;
-  max-width: 100%;
-  z-index: 1000;
-  background: #2f439a;
-  direction: rtl;
-}
-
-.footer-wrap {
-  display: flex;
-  align-items: center;
-  min-height: 100px;
-  margin: auto;
-  justify-content: space-between;
-}
-
-.footer-sec {
-  width: 33%;
-}
-
-.footer .link,
-.footer-sec {
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  .footer-wrap {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 90%;
-    text-align: center;
-    max-height: 100%;
-  }
-
-  .footer p {
-    margin: 0;
-  }
-  .footer-sec {
-    width: 100%;
-    font-size: 0.9em;
-  }
+.form-title {
+  text-align: right;
+  margin-bottom: 0;
   
-  .footer ul{
-    padding: 0;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 20px;
+}
+
+.second-title {
+  font-size: 1.5em;
+  text-align: right;
+  font-family: "LeonBold";
+}
+
+.contact-detail {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.detail-title {
+  margin-top: 0;
+  color: #fff;
+}
+
+.contact-parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 1px;
+  grid-row-gap: 0px;
+}
+.vl {
+  margin-right: 1rem;
+  color: #fff;
+}
+
+.detail-wrap {
+  padding-bottom: 15px;
+}
+
+.detail-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  border: none;
+  color: #2f439a !important;
+  text-align: right;
+  font-weight: 400;
+  font-size: 1.2em;
+  padding-bottom: 0.5rem;
+}
+
+.text-input {
+  padding: 0.5rem;
+}
+.input-line {
+  border-top: 1px solid #2f439b;
+  opacity: 0.2;
+  height: 1rem;
+}
+
+input[type="submit"] {
+  background-color: #2f439a;
+  color: white !important;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  text-align: center;
+  font-size: 18px;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+::placeholder {
+  color: #2f439a;
+}
+
+@media (max-width: 767px) {
+  .vl {
+    border-left: 0px;
+    text-align: center;
+    padding-left: 0;
   }
 
-  .footer .link, .footer ul{
-        font-size: 0.9em;
-font-weight: 500;
+  .form-title {
+    font-size: 2em;
+  }
+
+  .second-title {
+    font-size: 1.1em;
   }
 }

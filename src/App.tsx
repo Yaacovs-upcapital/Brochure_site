@@ -16,6 +16,7 @@ function App() {
   i18n.changeLanguage(language);
 
   return (
+    
     <div className={language != "en" ? "noEn":'en' }>
       <Layout getlang={getLangauge} />
     </div>

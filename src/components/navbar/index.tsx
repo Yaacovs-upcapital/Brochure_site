@@ -3,10 +3,11 @@ import { LogoWhite } from "../../assets/icons"
 import { LogoBlue } from "../../assets/icons"
 import { Link, NavLink } from "react-router-dom"
 import { useEffect, useState } from 'react';
-import useWindowSize from "../windowSize";
+import useWindowSize from "../../components/windowSize";
 import NavbarItems from "../NavbarItems";
 
 import TempDrawer from "../drawer";
+import React from "react";
 
 const Navbar = (props: any) => {
 
@@ -21,10 +22,11 @@ const Navbar = (props: any) => {
   }, []);
   
   return (
-    <div className={`navbar ${scrolled ? "light" : "dark"}`}>
+
+    <div className={`navbar ${scrolled ? "dark" : "light"}`}>
       <div className="navbar-wrap"  >
         <NavbarItems lang={props} />
-        <div><NavLink to={"/"}>{scrolled ? <LogoBlue /> : < LogoWhite />}</NavLink></div>
+       
         {useWindowSize() <= 910 ? <TempDrawer /> : ''}
       </div>
     </div>

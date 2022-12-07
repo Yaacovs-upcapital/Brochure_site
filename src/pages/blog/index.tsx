@@ -1,34 +1,56 @@
 import MediaControlCard from "../../components/card"
 import workingteam from "../../assets/images/working-team.jpg";
+import blog from "../../assets/images/Blog.png";
 
 import "./blog.css"
 import { useTranslation } from "react-i18next";
+import ContactForm from "../../components/footer";
+import { flexbox } from "@mui/system";
+import Navbar from "../../components/navbar";
 
 const Blog = () => {
 
     const { t } = useTranslation();
+    let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
     return (
-        <div className="blog-container">
-            <div className="bg-img">
-                <h1>{t('blog')}</h1><h1 style={{color:"red"}}>.</h1>
+        <div >
+           
+           <div className=" container mt-3">
+					<h1 style={{color:"#2f439a", fontSize:"40pt",textAlign:"right"}}><span style={{color:"red"}}>.</span>מהתקשורת</h1>
+					</div>
+           <div className="container">
+            <div className="row">
+               
+                {arr.map((item,index)=>(
+
+                    index===2?
+
+                     <div className="col-lg-4 col-md-12 col-sm-12">
+                    <div className="card mt-2" style={{width: "22rem", textAlign:"right"}}>
+                    
+                    
+                    <img src={blog} style={{height:"400px"}} className="img-fluid" alt="..."/>
+                        
+                    
+                    </div>
+                    </div>
+                    :
+                    <div className="col-lg-4 col-md-12 col-sm-12">
+                    <div className="card mt-2" style={{width: "23rem"}}>
+                    <img src={workingteam} className="card-img-top" alt="..."/>
+                    <div className="card-body" style={{textAlign:"right"}}>
+                        <h5 className="card-title" style={{fontFamily:"Leon",fontSize:"18pt", color:"rgb(47,67,155)", fontWeight:"600"}}>דווקא עכשיו רוורס פקטורינג</h5>
+                        <p className="card-text" style={{fontFamily:"Leon",fontSize:"14pt", color:"rgb(47,67,155)", fontWeight:"500"}}>בשעה שעומדים בפני התקשרות מול גופים גדולים, הספקים נדרשים לקחת בחשבון מראש פרמטרים רבים כדוגמת: העלות המימונית שלו.</p>
+                        <a href="#" className="btn btn-outline-primary">קראו עוד</a>
+                    </div>
+                    </div>
+                    </div>
+                ))}
+                
             </div>
 
-            <div className="articles container">
-                <MediaControlCard image={workingteam} path="/blog/:אומת+הפינטק/" >
-                    <h2 className="card-title">אומת הפינטק: הזווית הישראלית של הטכנולוגיה הפיננסית</h2>
-                    <div className="card-text">
-                        באומת הסטארטפ היתה זו רק שאלה של זמן עד שהטכנולוגיה תפרוץ גם אל תוך העולם הפיננסי המסורתי. בשנים האחרונות תחום הפינטק נחשב לאחד התחומים המתפתחים ביותר ושירותים רבים של מוצרים פיננסיים בשלל תחומים כדוגמת סליקה, אמצעי תשלום, ניהול השקעות ואשראי עוברים טרנספורמציה בחסות הטכנולוגי</div>
-                </MediaControlCard>
-            </div>
-
-            <div className="articles-wrap container">
-                <MediaControlCard path="/blog/:העסק+שלי+והבנק/"><h3 className="card-title">העסק שלי והבנק: כלל הזהב לזוגיות מוצלחת</h3><div className="card-text">מעטים האנשים שיכולים לומר בפה מלא כי אינם חשים כל חשש בשעה שמכשיר הטלפון מצלצל ועל הצג מופיע השם של הבנקאי.</div></MediaControlCard>
-                <MediaControlCard path="/blog/:חשיבות+ההון+החוזר/"><h3 className="card-title">חשיבות ההון החוזר לעסק חדש וקיים</h3><div className="card-text">בכדי לנהל עסק מצליח, לצד חזון ועבודה קשה, צריך להכיר את המספרים והמדדים אשר מרכיבים אותו מקרוב.</div></MediaControlCard>
-                <MediaControlCard path="/blog/:רוורס+פקטורינג/"><h3 className="card-title">דווקא עכשיו רוורס פקטורינג</h3><div className="card-text">בשעה שעומדים בפני התקשרות מול גופים גדולים, הספקים נדרשים לקחת בחשבון מראש פרמטרים רבים כדוגמת: העלות המימונית שלו.</div></MediaControlCard>
-                <MediaControlCard path="/blog/:מסע+בעקבות+הפקטורינג/"><h3 className="card-title" >מסע בעקבות הפקטורינג: מה זה ואיך הכל התחיל?</h3><div className="card-text">ההיסטוריה של מושג הפקטורינג מתחילה, כמו הרבה, דברים ברומא העתיקה בה לסוחרים היו מעין "פקידי הפצה" שניהלו עבורם את המכירה והמסירה של הסחורה.</div></MediaControlCard>
-                <MediaControlCard path="/blog/:מתן+אשראי/"><h3 className="card-title">מתן אשראי – איך עושים את זה נכון?</h3><div className="card-text">הצלחתה של שיטת הפקטורינג הקלאסי המאפשרת הפיכת אשראי ללקוחות לתשלום מיידי טמונה כבר בשלב הבדיקות הראשוניות, בשאילת השאלות הנכונות ובכללי המסגרת הנקבעים מראש.</div></MediaControlCard>
-            </div>
+           </div>
         </div>
     )
 }
